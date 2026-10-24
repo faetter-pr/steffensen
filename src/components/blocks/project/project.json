@@ -1,0 +1,69 @@
+{
+  "name": "project",
+  "display_name": "Project",
+  "is_root": true,
+  "is_nestable": false,
+  "schema": {
+    "title": {
+      "type": "text",
+      "required": true,
+      "pos": 0
+    },
+    "segment": {
+      "type": "option",
+      "pos": 1,
+      "options": [
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "cover": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 2
+    },
+    "cover_alt": {
+      "type": "text",
+      "required": true,
+      "pos": 3
+    },
+    "year": {
+      "type": "text",
+      "pos": 4
+    },
+    "location": {
+      "type": "text",
+      "pos": 5
+    },
+    "intro": {
+      "type": "richtext",
+      "pos": 6
+    },
+    "body": {
+      "type": "bloks",
+      "pos": 7
+    },
+    "seo": {
+      "type": "bloks",
+      "maximum": 1,
+      "restrict_components": true,
+      "component_whitelist": ["seo"],
+      "pos": 8
+    }
+  }
+}

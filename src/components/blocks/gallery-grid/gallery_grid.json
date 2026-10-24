@@ -1,0 +1,114 @@
+{
+  "name": "gallery_grid",
+  "display_name": "Gallery (grid)",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "images": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["image_item"],
+      "pos": 1
+    },
+    "columns": {
+      "type": "option",
+      "pos": 2,
+      "default_value": "3",
+      "options": [
+        {
+          "name": "2",
+          "value": "2"
+        },
+        {
+          "name": "3",
+          "value": "3"
+        },
+        {
+          "name": "4",
+          "value": "4"
+        }
+      ]
+    },
+    "gap": {
+      "type": "option",
+      "pos": 3,
+      "default_value": "frame",
+      "options": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "2px",
+          "value": "frame"
+        },
+        {
+          "name": "8px",
+          "value": "loose"
+        }
+      ]
+    },
+    "aspect": {
+      "type": "option",
+      "pos": 4,
+      "default_value": "square",
+      "options": [
+        {
+          "name": "Square",
+          "value": "square"
+        },
+        {
+          "name": "Portrait",
+          "value": "portrait"
+        },
+        {
+          "name": "Landscape",
+          "value": "landscape"
+        },
+        {
+          "name": "Original",
+          "value": "original"
+        }
+      ]
+    },
+    "variant": {
+      "type": "option",
+      "pos": 5,
+      "default_value": "contained",
+      "options": [
+        {
+          "name": "Contained",
+          "value": "contained"
+        },
+        {
+          "name": "Edge to edge",
+          "value": "edge-to-edge"
+        },
+        {
+          "name": "Strip of 3",
+          "value": "strip-3"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

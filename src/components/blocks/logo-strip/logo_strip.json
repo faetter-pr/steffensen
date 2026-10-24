@@ -1,0 +1,35 @@
+{
+  "name": "logo_strip",
+  "display_name": "Logo strip",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "logos": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["image_item"],
+      "pos": 1,
+      "description": "Only add logos you have written permission to display."
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

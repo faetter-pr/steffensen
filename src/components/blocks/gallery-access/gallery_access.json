@@ -1,0 +1,20 @@
+{
+  "name": "gallery_access",
+  "display_name": "Gallery access",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "heading": {
+      "type": "text",
+      "pos": 0
+    },
+    "instructions": {
+      "type": "textarea",
+      "pos": 1
+    },
+    "button_label": {
+      "type": "text",
+      "pos": 2
+    }
+  }
+}

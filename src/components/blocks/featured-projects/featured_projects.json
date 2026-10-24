@@ -1,0 +1,46 @@
+{
+  "name": "featured_projects",
+  "display_name": "Featured projects",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "intro": {
+      "type": "textarea",
+      "pos": 1
+    },
+    "projects": {
+      "type": "options",
+      "source": "internal_stories",
+      "folder_slug": "portfolio/",
+      "pos": 2
+    },
+    "cta_label": {
+      "type": "text",
+      "pos": 3
+    },
+    "cta_link": {
+      "type": "multilink",
+      "pos": 4
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

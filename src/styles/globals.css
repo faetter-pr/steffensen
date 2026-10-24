@@ -1,0 +1,395 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+ * Design tokens — docs/architecture.md §13.2 "Warm, honest, light."
+ *
+ * The brand palette lives in --brand-* below. The shadcn/Radix primitives read
+ * the semantic names (--background, --primary, …), so the brand values are
+ * mapped onto those further down rather than duplicated.
+ * ------------------------------------------------------------------------ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Brand tokens, usable directly as bg-brand-accent / text-brand-ink etc. */
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-ink: var(--brand-accent-ink);
+  --color-brand-accent-soft: var(--brand-accent-soft);
+  --color-brand-sage: var(--brand-sage);
+  --color-brand-rose: var(--brand-rose);
+  --color-brand-line: var(--brand-line);
+  --color-brand-on-image: var(--brand-on-image);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /*
+   * Motion. The custom ease-out matches EASE in lib/motion.ts — CSS transitions and
+   * Motion-driven animation must feel like the same system.
+   */
+  --ease-gentle: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-gentle: 600ms;
+  --duration-fast: 250ms;
+
+  /* Frame separation (editorial brief → Spacing). */
+  --spacing-frame: 2px;
+
+  /* Layout — max width ~1280px for the rare contained block. */
+  --spacing-content: 80rem;
+
+  /*
+   * Display type scale (editorial brief → Type).
+   * Hero 40px mobile → 96px desktop; labels over images 19-28px.
+   */
+  --text-hero: clamp(2.5rem, 1.2rem + 6.5vw, 6rem);
+  --text-hero--line-height: 1.02;
+  --text-label: clamp(1.1875rem, 0.95rem + 1.1vw, 1.75rem);
+  --text-label--line-height: 1.15;
+  --text-caption: 0.6875rem; /* 11px */
+  --text-caption--line-height: 1.5;
+}
+
+:root {
+  /* --- palette (source of truth) — editorial brief → Tokens --- */
+  --brand-bg: #faf7f2; /* warm off-white */
+  --brand-surface: #ffffff;
+  --brand-ink: #2b2723; /* warm near-black; also dark sections */
+  --brand-muted: #7a7168; /* captions, process line */
+  --brand-accent: #c86b4a; /* terracotta — links, underline, focus */
+  --brand-accent-soft: #f1ddd2;
+  --brand-sage: #8a9a83; /* kindergarten accent */
+  --brand-rose: #c79f9a; /* wedding accent */
+  --brand-line: #e7e0d6; /* hairlines (rare) */
+  --brand-on-image: #ffffff; /* text laid over photos */
+
+  /*
+   * Accessibility (§13.10, 4.5:1 minimum).
+   * --brand-accent #C86B4A on --brand-bg #FAF7F2 measures ~3.6:1 and FAILS for
+   * body-size text. Use --brand-accent for large text (>=24px), borders, icons
+   * and button FILLS (white on terracotta passes). Use --brand-accent-ink for
+   * inline links and any normal-size text on the page background.
+   */
+  --brand-accent-ink: #9c4526; /* ~6.0:1 on --brand-bg */
+
+  /* --- shadcn/Radix semantic mapping --- */
+  --background: var(--brand-bg);
+  --foreground: var(--brand-ink);
+  --card: var(--brand-surface);
+  --card-foreground: var(--brand-ink);
+  --popover: var(--brand-surface);
+  --popover-foreground: var(--brand-ink);
+  --primary: var(--brand-accent);
+  --primary-foreground: #ffffff;
+  --secondary: var(--brand-accent-soft);
+  --secondary-foreground: var(--brand-ink);
+  --muted: #f3eee6;
+  --muted-foreground: var(--brand-muted);
+  --accent: var(--brand-accent-soft);
+  --accent-foreground: var(--brand-ink);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: var(--brand-line);
+  --input: var(--brand-line);
+  --ring: var(--brand-accent);
+  --chart-1: var(--brand-accent);
+  --chart-2: var(--brand-sage);
+  --chart-3: var(--brand-muted);
+  --chart-4: var(--brand-accent-soft);
+  --chart-5: var(--brand-ink);
+
+  /*
+   * Radii: 0.
+   * The editorial brief overrides §13.2's "friendly 12-16px" — "No cards, drop shadows,
+   * boxed callouts... Separation comes from 2px gaps between frames and from whitespace."
+   * Squared corners are load-bearing for the gallery-wall feel, so this is deliberately
+   * 0 rather than small. Radix primitives inherit it.
+   */
+  --radius: 0rem;
+
+  /* Frame separation — the only gap the editorial layout uses. */
+  --frame-gap: 2px;
+
+  --sidebar: var(--brand-surface);
+  --sidebar-foreground: var(--brand-ink);
+  --sidebar-primary: var(--brand-accent);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--brand-accent-soft);
+  --sidebar-accent-foreground: var(--brand-ink);
+  --sidebar-border: var(--brand-line);
+  --sidebar-ring: var(--brand-accent);
+}
+
+/* ---------------------------------------------------------------------------
+ * Segment theming (§13.2): a data-segment attribute on the page wrapper
+ * shifts the accent. Sage for kindergartens, terracotta for schools,
+ * dusty rose for weddings.
+ * ------------------------------------------------------------------------ */
+
+[data-segment="kindergartens"] {
+  --brand-accent: #8a9a83; /* sage */
+  --brand-accent-ink: #4f5c4a; /* ~6.2:1 on --brand-bg */
+  --brand-accent-soft: #e2e8df;
+}
+
+[data-segment="schools"] {
+  --brand-accent: #c86b4a; /* terracotta (default) */
+  --brand-accent-ink: #9c4526;
+  --brand-accent-soft: #f1ddd2;
+}
+
+[data-segment="weddings"] {
+  --brand-accent: var(--brand-rose); /* dusty rose */
+  --brand-accent-ink: #8a4f4d; /* ~5.6:1 on --brand-bg */
+  --brand-accent-soft: #f0e2e0;
+}
+
+/*
+ * The dark block is retained so the shadcn primitives stay valid if dark mode
+ * is ever enabled. The site itself ships light-only — §13.1 "airy and quiet".
+ */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  /*
+   * Headings use the soft serif, light weight.
+   * The editorial brief wants serif for ALL display and caption text, so h4-h6 are
+   * included too — there is no sans heading anywhere in this design.
+   */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif), ui-serif, Georgia, serif;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+  }
+
+  /* §13.10 / §13.2 — visible focus rings */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* §13.2 / §13.10 — respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Max width ~1280px — for the rare contained block. Most frames go edge to edge. */
+  .container-content {
+    @apply mx-auto w-full max-w-(--spacing-content) px-5 sm:px-8;
+  }
+
+  /* Mobile first, tap targets at least 44px. */
+  .tap-target {
+    @apply min-h-11 min-w-11;
+  }
+
+  /* ---------------------------------------------------------------------------
+   * Editorial layout primitives.
+   * "The images are the page." Frames are separated by 2px and nothing else —
+   * no cards, no shadows, no rounded boxes.
+   * ------------------------------------------------------------------------ */
+
+  /* Grid/flex gap of exactly one frame separation. */
+  .gap-frame {
+    gap: var(--frame-gap);
+  }
+
+  /*
+   * Text laid over a photograph.
+   *
+   * Overlay strength alone is not always enough — a bright sky behind white text can
+   * still fail 4.5:1. The scrim adds a gradient only behind the text itself, which is
+   * what actually protects legibility on unpredictable photography (brief → Rendering
+   * rules for overlays).
+   */
+  .image-scrim {
+    background-image: linear-gradient(
+      to top,
+      rgb(0 0 0 / 0.55) 0%,
+      rgb(0 0 0 / 0.25) 35%,
+      transparent 70%
+    );
+  }
+
+  .image-scrim-light {
+    background-image: linear-gradient(
+      to top,
+      rgb(255 255 255 / 0.7) 0%,
+      rgb(255 255 255 / 0.3) 35%,
+      transparent 70%
+    );
+  }
+
+  /* A hairline — the only divider this design uses. */
+  .hairline {
+    background-color: var(--brand-line);
+    height: 1px;
+  }
+
+  /*
+   * CTA link underline that draws from the left on hover
+   * (brief → Where to use it, item 10). CSS rather than Motion: it is a hover
+   * micro-interaction, not a reveal, and this costs no JavaScript.
+   */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15em;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--duration-gentle) var(--ease-gentle);
+  }
+
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link-underline::after {
+      transform: scaleX(1);
+      transition: none;
+    }
+  }
+
+  /*
+   * Design-sandbox image placeholder.
+   *
+   * Rendered by <PhotoImage> for `placeholder://WxH` sources, so blocks can be designed
+   * and reviewed before any photography exists. Picks up --brand-accent, which means it
+   * also shifts per data-segment and doubles as a check that segment theming works.
+   *
+   * Not test scaffolding: it stays useful for any block whose images are not yet chosen.
+   */
+  .placeholder-image {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: calc(var(--radius) * 0.5);
+    background-image: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--brand-accent) 22%, var(--brand-surface)) 0%,
+      color-mix(in oklab, var(--brand-accent-soft) 70%, var(--brand-surface)) 55%,
+      color-mix(in oklab, var(--brand-sage) 18%, var(--brand-surface)) 100%
+    );
+    /* A faint diagonal weave, so overlapping placeholders stay distinguishable. */
+    position: relative;
+  }
+
+  .placeholder-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0 10px,
+      color-mix(in oklab, var(--brand-ink) 5%, transparent) 10px 11px
+    );
+  }
+}

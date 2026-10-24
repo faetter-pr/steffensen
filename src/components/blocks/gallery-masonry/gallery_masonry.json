@@ -1,0 +1,76 @@
+{
+  "name": "gallery_masonry",
+  "display_name": "Gallery (masonry)",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "images": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["image_item"],
+      "pos": 1
+    },
+    "columns": {
+      "type": "option",
+      "pos": 2,
+      "default_value": "3",
+      "options": [
+        {
+          "name": "2",
+          "value": "2"
+        },
+        {
+          "name": "3",
+          "value": "3"
+        },
+        {
+          "name": "4",
+          "value": "4"
+        }
+      ]
+    },
+    "gap": {
+      "type": "option",
+      "pos": 3,
+      "default_value": "frame",
+      "options": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "2px",
+          "value": "frame"
+        },
+        {
+          "name": "8px",
+          "value": "loose"
+        }
+      ]
+    },
+    "edge_to_edge": {
+      "type": "boolean",
+      "pos": 4
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

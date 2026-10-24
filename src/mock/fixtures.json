@@ -1,0 +1,1543 @@
+{
+  "_comment": [
+    "Design-sandbox fixtures. Rendered at /preview (dev only, never in production).",
+    "",
+    "Purpose: build and look at blocks BEFORE a Storyblok space exists. These shapes",
+    "follow storyblok-components.json closely enough to be useful, but they are not a",
+    "contract — nothing here affects the real data path, and when real content arrives",
+    "this file simply stops being used.",
+    "",
+    "Images use `placeholder://WIDTHxHEIGHT`. <PhotoImage> renders those as a coloured",
+    "box at that aspect ratio, so no image files are needed.",
+    "",
+    "To add a block: add an entry to `blocks` keyed by its Storyblok technical name.",
+    "It appears at /preview automatically."
+  ],
+  "blocks": {
+    "hero_fullbleed": {
+      "label": "Hero (full-bleed)",
+      "notes": "Editorial recipe #1 — 85svh, headline bottom-left, no buttons, scroll cue. Headline breaks on newlines.",
+      "variants": [
+        {
+          "name": "Home",
+          "segment": null,
+          "blok": {
+            "_uid": "mock-hero-1",
+            "component": "hero_fullbleed",
+            "image": {
+              "id": 1,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://2400x1400",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Børn leger udendørs i eftermiddagssol",
+            "headline": "Øjeblikke,\nder ligner jer.",
+            "subline": "Fotografering til børnehaver, skoler og bryllupper.",
+            "overlay_strength": "medium",
+            "text_tone": "light"
+          }
+        },
+        {
+          "name": "Schools — strong overlay",
+          "segment": "schools",
+          "blok": {
+            "_uid": "mock-hero-2",
+            "component": "hero_fullbleed",
+            "image": {
+              "id": 2,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://2400x1200",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Klassebillede taget i skolegården",
+            "headline": "Skolefotografering\nuden stress.",
+            "subline": "En skoledag, alle klasser, forhåndsvisning inden for 48 timer.",
+            "overlay_strength": "strong",
+            "text_tone": "light"
+          }
+        },
+        {
+          "name": "Weddings — no overlay, no CTA",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "mock-hero-3",
+            "component": "hero_fullbleed",
+            "image": {
+              "id": 3,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://2400x1600",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Par går hånd i hånd i aftenlys",
+            "headline": "Dagen,\nsom den var.",
+            "subline": "Rolig, nærværende bryllupsfotografering.",
+            "overlay_strength": "light",
+            "text_tone": "light"
+          }
+        }
+      ]
+    },
+    "hero_split": {
+      "label": "Hero (split)",
+      "notes": "architecture.md §13.5 — kindergarten page opener.",
+      "variants": [
+        {
+          "name": "Kindergartens",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "m-hs",
+            "component": "hero_split",
+            "image": {
+              "id": 1,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://1600x2000",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Barn i gang med at male ved et bord",
+            "headline": "Naturlige billeder af børn, taget på deres præmisser.",
+            "subline": "Rolig fotografering i hverdagen — uden opstillede smil og lange ventetider.",
+            "cta_label": "Book en fotodag",
+            "cta_link": {
+              "linktype": "story",
+              "cached_url": "contact"
+            },
+            "secondary_cta_label": "Hent infoark",
+            "secondary_cta_link": {
+              "linktype": "story",
+              "cached_url": "pricing"
+            },
+            "image_side": "right"
+          }
+        }
+      ]
+    },
+    "segment_chooser": {
+      "label": "Segment chooser",
+      "notes": "Editorial recipe #2 — three 60svh panels, 2px apart, label + arrow only.",
+      "variants": [
+        {
+          "name": "Three segments",
+          "segment": null,
+          "blok": {
+            "_uid": "m-sc",
+            "component": "segment_chooser",
+            "items": [
+              {
+                "_uid": "m-sc1",
+                "component": "segment_card",
+                "label": "Børnehaver",
+                "image": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1500",
+                  "fieldtype": "asset"
+                },
+                "image_alt": "Børn leger i en børnehave",
+                "link": {
+                  "linktype": "story",
+                  "cached_url": "kindergartens"
+                },
+                "segment": "kindergartens",
+                "overlay_strength": "medium",
+                "text_tone": "light"
+              },
+              {
+                "_uid": "m-sc2",
+                "component": "segment_card",
+                "label": "Skoler",
+                "image": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1500",
+                  "fieldtype": "asset"
+                },
+                "image_alt": "Klassebillede i skolegården",
+                "link": {
+                  "linktype": "story",
+                  "cached_url": "schools"
+                },
+                "segment": "schools",
+                "overlay_strength": "medium",
+                "text_tone": "light"
+              },
+              {
+                "_uid": "m-sc3",
+                "component": "segment_card",
+                "label": "Bryllupper",
+                "image": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1500",
+                  "fieldtype": "asset"
+                },
+                "image_alt": "Par i aftenlys",
+                "link": {
+                  "linktype": "story",
+                  "cached_url": "weddings"
+                },
+                "segment": "weddings",
+                "overlay_strength": "medium",
+                "text_tone": "light"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "gallery_grid": {
+      "label": "Gallery (grid)",
+      "notes": "Editorial recipe #6 — three equal frames, 2px apart, no captions.",
+      "variants": [
+        {
+          "name": "Strip of 3",
+          "segment": "schools",
+          "blok": {
+            "_uid": "m-gg",
+            "component": "gallery_grid",
+            "columns": "3",
+            "gap": "frame",
+            "aspect": "square",
+            "images": [
+              {
+                "_uid": "m-gg1",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Klassebillede udendørs"
+              },
+              {
+                "_uid": "m-gg2",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Portræt af elev ved vindue"
+              },
+              {
+                "_uid": "m-gg3",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Søskendebillede"
+              }
+            ],
+            "variant": "strip-3"
+          }
+        }
+      ]
+    },
+    "gallery_masonry": {
+      "label": "Gallery (masonry)",
+      "notes": "architecture.md §13.4 — selected work.",
+      "variants": [
+        {
+          "name": "3 columns",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "m-gm",
+            "component": "gallery_masonry",
+            "headline": "Udvalgte øjeblikke",
+            "columns": "3",
+            "images": [
+              {
+                "_uid": "m-gm1",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1600",
+                  "fieldtype": "asset"
+                },
+                "alt": "Barn maler ved bord"
+              },
+              {
+                "_uid": "m-gm2",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x900",
+                  "fieldtype": "asset"
+                },
+                "alt": "Børn løber på legepladsen"
+              },
+              {
+                "_uid": "m-gm3",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1500",
+                  "fieldtype": "asset"
+                },
+                "alt": "Stille stund med en bog"
+              },
+              {
+                "_uid": "m-gm4",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x800",
+                  "fieldtype": "asset"
+                },
+                "alt": "Hænder i sandkassen"
+              },
+              {
+                "_uid": "m-gm5",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1700",
+                  "fieldtype": "asset"
+                },
+                "alt": "Barn kigger ud ad vinduet"
+              },
+              {
+                "_uid": "m-gm6",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1100",
+                  "fieldtype": "asset"
+                },
+                "alt": "Gruppe samlet om et spil"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "gallery_carousel": {
+      "label": "Gallery (carousel)",
+      "notes": "CSS scroll-snap, no carousel library. Autoplay deliberately not implemented (§13.10).",
+      "variants": [
+        {
+          "name": "Five images",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "m-gc",
+            "component": "gallery_carousel",
+            "headline": "Fra dagen",
+            "images": [
+              {
+                "_uid": "m-gc1",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1600x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Par går gennem allé"
+              },
+              {
+                "_uid": "m-gc2",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1600x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Gæster danser"
+              },
+              {
+                "_uid": "m-gc3",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1600x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Bordopdækning i aftenlys"
+              },
+              {
+                "_uid": "m-gc4",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1600x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Første dans"
+              },
+              {
+                "_uid": "m-gc5",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1600x1200",
+                  "fieldtype": "asset"
+                },
+                "alt": "Kys på trappen"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "project_grid": {
+      "label": "Project grid",
+      "notes": "architecture.md §13.8. With the filter on, selection is URL-synced (?segment=).",
+      "variants": [
+        {
+          "name": "With filter",
+          "segment": null,
+          "blok": {
+            "_uid": "m-pg",
+            "component": "project_grid",
+            "headline": "Portfolio",
+            "show_filter": true,
+            "layout": "grid",
+            "projects": [
+              {
+                "uuid": "prj-1",
+                "name": "Børnehuset Solsikken",
+                "slug": "portfolio/solsikken",
+                "full_slug": "portfolio/solsikken",
+                "id": 35702,
+                "content": {
+                  "_uid": "prj-1",
+                  "component": "project",
+                  "title": "Børnehuset Solsikken",
+                  "segment": "kindergartens",
+                  "cover": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://1200x1500",
+                    "fieldtype": "asset"
+                  },
+                  "cover_alt": "Barn ved vinduet",
+                  "year": "2025",
+                  "location": "Aarhus"
+                }
+              },
+              {
+                "uuid": "prj-2",
+                "name": "Vestre Skole",
+                "slug": "portfolio/vestre-skole",
+                "full_slug": "portfolio/vestre-skole",
+                "id": 25462,
+                "content": {
+                  "_uid": "prj-2",
+                  "component": "project",
+                  "title": "Vestre Skole",
+                  "segment": "schools",
+                  "cover": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://1200x1500",
+                    "fieldtype": "asset"
+                  },
+                  "cover_alt": "Klasse opstillet i skolegården",
+                  "year": "2025",
+                  "location": "Odense"
+                }
+              },
+              {
+                "uuid": "prj-3",
+                "name": "Anna & Kasper",
+                "slug": "portfolio/anna-kasper",
+                "full_slug": "portfolio/anna-kasper",
+                "id": 3862,
+                "content": {
+                  "_uid": "prj-3",
+                  "component": "project",
+                  "title": "Anna & Kasper",
+                  "segment": "weddings",
+                  "cover": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://1200x1500",
+                    "fieldtype": "asset"
+                  },
+                  "cover_alt": "Par i aftenlys",
+                  "year": "2024",
+                  "location": "Møn"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "featured_projects": {
+      "label": "Featured projects",
+      "notes": "Curated 3-6 (§4). Reference field.",
+      "variants": [
+        {
+          "name": "Three weddings",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "m-fp",
+            "component": "featured_projects",
+            "headline": "Udvalgte bryllupper",
+            "intro": "Tre hele fortællinger, fra morgen til sidste dans.",
+            "projects": [
+              {
+                "uuid": "prj-1",
+                "name": "Børnehuset Solsikken",
+                "slug": "portfolio/solsikken",
+                "full_slug": "portfolio/solsikken",
+                "id": 35702,
+                "content": {
+                  "_uid": "prj-1",
+                  "component": "project",
+                  "title": "Børnehuset Solsikken",
+                  "segment": "kindergartens",
+                  "cover": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://1200x1500",
+                    "fieldtype": "asset"
+                  },
+                  "cover_alt": "Barn ved vinduet",
+                  "year": "2025",
+                  "location": "Aarhus"
+                }
+              },
+              {
+                "uuid": "prj-2",
+                "name": "Vestre Skole",
+                "slug": "portfolio/vestre-skole",
+                "full_slug": "portfolio/vestre-skole",
+                "id": 25462,
+                "content": {
+                  "_uid": "prj-2",
+                  "component": "project",
+                  "title": "Vestre Skole",
+                  "segment": "schools",
+                  "cover": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://1200x1500",
+                    "fieldtype": "asset"
+                  },
+                  "cover_alt": "Klasse opstillet i skolegården",
+                  "year": "2025",
+                  "location": "Odense"
+                }
+              },
+              {
+                "uuid": "prj-3",
+                "name": "Anna & Kasper",
+                "slug": "portfolio/anna-kasper",
+                "full_slug": "portfolio/anna-kasper",
+                "id": 3862,
+                "content": {
+                  "_uid": "prj-3",
+                  "component": "project",
+                  "title": "Anna & Kasper",
+                  "segment": "weddings",
+                  "cover": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://1200x1500",
+                    "fieldtype": "asset"
+                  },
+                  "cover_alt": "Par i aftenlys",
+                  "year": "2024",
+                  "location": "Møn"
+                }
+              }
+            ],
+            "cta_label": "Se hele portfolioen",
+            "cta_link": {
+              "linktype": "story",
+              "cached_url": "portfolio"
+            }
+          }
+        }
+      ]
+    },
+    "image_full": {
+      "label": "Image (full)",
+      "notes": "Editorial recipe #3 — full-bleed frame, 11px caption, MaskReveal + parallax.",
+      "variants": [
+        {
+          "name": "Wide + caption",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "m-if",
+            "component": "image_full",
+            "image": {
+              "id": 1,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://2400x1500",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Gæster skåler under middagen",
+            "caption": "Tale og skål, sidst på aftenen.",
+            "width": "full",
+            "aspect": "16-9",
+            "max_height": "90svh"
+          }
+        }
+      ]
+    },
+    "image_pair": {
+      "label": "Image pair",
+      "notes": "Editorial recipe #4 — 5/8 tall frame + 3/8 stacked column, differing parallax.",
+      "variants": [
+        {
+          "name": "Asymmetric",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "m-ip",
+            "component": "image_pair",
+            "caption": "Forberedelser, morgen.",
+            "images": [
+              {
+                "_uid": "m-ip1",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1400x1750",
+                  "fieldtype": "asset"
+                },
+                "alt": "Brudekjole i vindueslys"
+              },
+              {
+                "_uid": "m-ip2",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x800",
+                  "fieldtype": "asset"
+                },
+                "alt": "Detalje af brudebuket"
+              },
+              {
+                "_uid": "m-ip3",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://1200x1500",
+                  "fieldtype": "asset"
+                },
+                "alt": "Ringene på et bord"
+              }
+            ],
+            "variant": "asymmetric"
+          }
+        }
+      ]
+    },
+    "text_image": {
+      "label": "Text + image",
+      "notes": "Image left or right.",
+      "variants": [
+        {
+          "name": "Image left",
+          "segment": null,
+          "blok": {
+            "_uid": "m-ti",
+            "component": "text_image",
+            "image": {
+              "id": 1,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://1400x1750",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Fotograf i arbejde under en fotodag",
+            "image_side": "left",
+            "headline": "Lidt om mig",
+            "text": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Jeg har fotograferet børnehaver, skoler og bryllupper i over ti år. Det, jeg leder efter, er det, der sker af sig selv."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Derfor arbejder jeg roligt og uden store opstillinger."
+                    }
+                  ]
+                }
+              ]
+            },
+            "cta_label": "Mød mig",
+            "cta_link": {
+              "linktype": "story",
+              "cached_url": "about"
+            }
+          }
+        }
+      ]
+    },
+    "package_cards": {
+      "label": "Package cards",
+      "notes": "Typographic list, hairline per column — no cards. Reference field mimics resolve_relations.",
+      "variants": [
+        {
+          "name": "Three tiers",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "m-pc",
+            "component": "package_cards",
+            "headline": "Pakker",
+            "intro": "Priser er vejledende og afhænger af antal børn.",
+            "packages": [
+              {
+                "uuid": "pkg-1",
+                "name": "Basis",
+                "slug": "packages/basic",
+                "full_slug": "packages/basic",
+                "id": 89278,
+                "content": {
+                  "_uid": "pkg-1",
+                  "component": "package",
+                  "title": "Basis",
+                  "segment": "kindergartens",
+                  "description": "Til mindre institutioner.",
+                  "price_from": "149 kr.",
+                  "price_unit": "per_child",
+                  "highlight": false,
+                  "cta_label": "Forespørg",
+                  "cta_link": {
+                    "linktype": "story",
+                    "cached_url": "contact"
+                  },
+                  "included": [
+                    {
+                      "_uid": "i1",
+                      "component": "included_item",
+                      "text": "Portræt af hvert barn"
+                    },
+                    {
+                      "_uid": "i2",
+                      "component": "included_item",
+                      "text": "Gruppebillede"
+                    },
+                    {
+                      "_uid": "i3",
+                      "component": "included_item",
+                      "text": "Forældregalleri i 3 måneder"
+                    }
+                  ]
+                }
+              },
+              {
+                "uuid": "pkg-2",
+                "name": "Standard",
+                "slug": "packages/standard",
+                "full_slug": "packages/standard",
+                "id": 36842,
+                "content": {
+                  "_uid": "pkg-2",
+                  "component": "package",
+                  "title": "Standard",
+                  "segment": "kindergartens",
+                  "description": "Den mest valgte.",
+                  "price_from": "199 kr.",
+                  "price_unit": "per_child",
+                  "highlight": true,
+                  "cta_label": "Forespørg",
+                  "cta_link": {
+                    "linktype": "story",
+                    "cached_url": "contact"
+                  },
+                  "included": [
+                    {
+                      "_uid": "i4",
+                      "component": "included_item",
+                      "text": "Alt i Basis"
+                    },
+                    {
+                      "_uid": "i5",
+                      "component": "included_item",
+                      "text": "Situationsbilleder fra dagen"
+                    },
+                    {
+                      "_uid": "i6",
+                      "component": "included_item",
+                      "text": "Søskendebilleder"
+                    },
+                    {
+                      "_uid": "i7",
+                      "component": "included_item",
+                      "text": "Galleri i 12 måneder"
+                    }
+                  ]
+                }
+              },
+              {
+                "uuid": "pkg-3",
+                "name": "Udvidet",
+                "slug": "packages/extended",
+                "full_slug": "packages/extended",
+                "id": 60269,
+                "content": {
+                  "_uid": "pkg-3",
+                  "component": "package",
+                  "title": "Udvidet",
+                  "segment": "kindergartens",
+                  "description": "Hele dagen dokumenteret.",
+                  "price_from": "259 kr.",
+                  "price_unit": "per_child",
+                  "highlight": false,
+                  "cta_label": "Forespørg",
+                  "cta_link": {
+                    "linktype": "story",
+                    "cached_url": "contact"
+                  },
+                  "included": [
+                    {
+                      "_uid": "i8",
+                      "component": "included_item",
+                      "text": "Alt i Standard"
+                    },
+                    {
+                      "_uid": "i9",
+                      "component": "included_item",
+                      "text": "Reportage fra hele dagen"
+                    },
+                    {
+                      "_uid": "i10",
+                      "component": "included_item",
+                      "text": "Trykklare filer"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "process_steps": {
+      "label": "Process steps",
+      "notes": "Editorial recipe #7 — one muted line of words, hairlines draw in on entry.",
+      "variants": [
+        {
+          "name": "Line",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "m-ps",
+            "component": "process_steps",
+            "steps": [
+              {
+                "_uid": "m-ps1",
+                "component": "process_step",
+                "title": "Forespørgsel"
+              },
+              {
+                "_uid": "m-ps2",
+                "component": "process_step",
+                "title": "Planlægning"
+              },
+              {
+                "_uid": "m-ps3",
+                "component": "process_step",
+                "title": "Fotodag"
+              },
+              {
+                "_uid": "m-ps4",
+                "component": "process_step",
+                "title": "Galleri"
+              }
+            ],
+            "variant": "line"
+          }
+        }
+      ]
+    },
+    "trust_bar": {
+      "label": "Trust bar",
+      "notes": "Single quiet line of statements. The icon field is intentionally not rendered (brief forbids icon grids).",
+      "variants": [
+        {
+          "name": "Kindergartens",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "m-tb",
+            "component": "trust_bar",
+            "items": [
+              {
+                "_uid": "m-tb1",
+                "component": "trust_item",
+                "icon": "shield",
+                "text": "Samtykkeblanketter stilles til rådighed"
+              },
+              {
+                "_uid": "m-tb2",
+                "component": "trust_item",
+                "icon": "heart",
+                "text": "Rolig, børneledet tilgang"
+              },
+              {
+                "_uid": "m-tb3",
+                "component": "trust_item",
+                "icon": "check",
+                "text": "GDPR-bevidst proces"
+              },
+              {
+                "_uid": "m-tb4",
+                "component": "trust_item",
+                "icon": "clock",
+                "text": "Forældregalleri inden for 48 timer"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "notes": "Quiet typographic quotes, hairline above each. Portraits intentionally not rendered.",
+      "variants": [
+        {
+          "name": "Grid",
+          "segment": null,
+          "blok": {
+            "_uid": "m-ts",
+            "component": "testimonials",
+            "headline": "Hvad kunderne siger",
+            "layout": "grid",
+            "testimonials": [
+              {
+                "uuid": "tst-1",
+                "name": "testimonials/t1",
+                "slug": "testimonials/t1",
+                "full_slug": "testimonials/t1",
+                "id": 94388,
+                "content": {
+                  "_uid": "tst-1",
+                  "component": "testimonial",
+                  "quote": "Børnene glemte nærmest, at der var en fotograf. Billederne ligner dem.",
+                  "name": "Mette Hansen",
+                  "role": "Leder",
+                  "organisation": "Børnehuset Solsikken",
+                  "segment": "kindergartens",
+                  "portrait": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://400x400",
+                    "fieldtype": "asset"
+                  },
+                  "portrait_alt": "Portræt af institutionsleder"
+                }
+              },
+              {
+                "uuid": "tst-2",
+                "name": "testimonials/t2",
+                "slug": "testimonials/t2",
+                "full_slug": "testimonials/t2",
+                "id": 39307,
+                "content": {
+                  "_uid": "tst-2",
+                  "component": "testimonial",
+                  "quote": "Hele skolen på én dag, uden at det føltes som en fabrik.",
+                  "name": "Jens Overgaard",
+                  "role": "Skoleleder",
+                  "organisation": "Vestre Skole",
+                  "segment": "schools",
+                  "portrait": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://400x400",
+                    "fieldtype": "asset"
+                  },
+                  "portrait_alt": "Portræt af skoleleder"
+                }
+              },
+              {
+                "uuid": "tst-3",
+                "name": "testimonials/t3",
+                "slug": "testimonials/t3",
+                "full_slug": "testimonials/t3",
+                "id": 51375,
+                "content": {
+                  "_uid": "tst-3",
+                  "component": "testimonial",
+                  "quote": "Vi fik billeder, vi faktisk tør hænge op.",
+                  "name": "Anna og Kasper",
+                  "role": "Brudepar",
+                  "organisation": "",
+                  "segment": "weddings",
+                  "portrait": {
+                    "id": 1,
+                    "name": "",
+                    "alt": null,
+                    "focus": null,
+                    "title": null,
+                    "source": null,
+                    "copyright": null,
+                    "filename": "placeholder://400x400",
+                    "fieldtype": "asset"
+                  },
+                  "portrait_alt": "Portræt af brudepar"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "logo_strip": {
+      "label": "Logo strip",
+      "notes": "§4: only with written permission.",
+      "variants": [
+        {
+          "name": "Schools",
+          "segment": "schools",
+          "blok": {
+            "_uid": "m-ls",
+            "component": "logo_strip",
+            "headline": "Skoler jeg har arbejdet med",
+            "logos": [
+              {
+                "_uid": "m-ls1",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://400x160",
+                  "fieldtype": "asset"
+                },
+                "alt": "Logo, Nørrebro Skole"
+              },
+              {
+                "_uid": "m-ls2",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://400x160",
+                  "fieldtype": "asset"
+                },
+                "alt": "Logo, Sønderby Friskole"
+              },
+              {
+                "_uid": "m-ls3",
+                "component": "image_item",
+                "asset": {
+                  "id": 1,
+                  "name": "",
+                  "alt": null,
+                  "focus": null,
+                  "title": null,
+                  "source": null,
+                  "copyright": null,
+                  "filename": "placeholder://400x160",
+                  "fieldtype": "asset"
+                },
+                "alt": "Logo, Vestre Skole"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "notes": "architecture.md §5 — Radix Accordion.",
+      "variants": [
+        {
+          "name": "Kindergartens",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "m-faq",
+            "component": "faq",
+            "headline": "Ofte stillede spørgsmål",
+            "items": [
+              {
+                "_uid": "m-faq1",
+                "component": "faq_item",
+                "question": "Hvordan håndterer du børn, der ikke vil fotograferes?",
+                "answer": {
+                  "type": "doc",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Så bliver de ikke fotograferet. Jeg presser aldrig et barn, og vi aftaler på forhånd, hvordan I markerer det."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "_uid": "m-faq2",
+                "component": "faq_item",
+                "question": "Hvad med samtykke?",
+                "answer": {
+                  "type": "doc",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Institutionen indhenter samtykke fra forældrene. Jeg stiller en skabelon til rådighed, og billeder uden samtykke bruges aldrig offentligt."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "_uid": "m-faq3",
+                "component": "faq_item",
+                "question": "Hvor lang tid tager leveringen?",
+                "answer": {
+                  "type": "doc",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Forældregalleriet er klar inden for 48 timer. Den endelige levering typisk inden for to uger."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cta_banner": {
+      "label": "CTA banner",
+      "notes": "Editorial recipe #8 — one serif sentence, underlined link, no button fill.",
+      "variants": [
+        {
+          "name": "Minimal",
+          "segment": null,
+          "blok": {
+            "_uid": "m-cta",
+            "component": "cta_banner",
+            "headline": "Lad os lave noget ægte.",
+            "cta_label": "Send en forespørgsel",
+            "cta_link": {
+              "linktype": "story",
+              "cached_url": "contact"
+            },
+            "background": "accent",
+            "variant": "minimal"
+          }
+        }
+      ]
+    },
+    "stats": {
+      "label": "Stats",
+      "notes": "architecture.md §13.6 — school page.",
+      "variants": [
+        {
+          "name": "School day",
+          "segment": "schools",
+          "blok": {
+            "_uid": "m-st",
+            "component": "stats",
+            "items": [
+              {
+                "_uid": "m-st1",
+                "component": "stat_item",
+                "value": "120+",
+                "label": "klasser fotograferet"
+              },
+              {
+                "_uid": "m-st2",
+                "component": "stat_item",
+                "value": "48 t",
+                "label": "til forhåndsvisning"
+              },
+              {
+                "_uid": "m-st3",
+                "component": "stat_item",
+                "value": "1 dag",
+                "label": "på skolen"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "contact_form": {
+      "label": "Contact form",
+      "notes": "architecture.md §11 — pick a type and the fields change. Submitting without RESEND_API_KEY returns a clear error.",
+      "variants": [
+        {
+          "name": "All segments",
+          "segment": null,
+          "blok": {
+            "_uid": "m-cf",
+            "component": "contact_form",
+            "heading": "Fortæl om opgaven",
+            "intro": "Jeg vender tilbage inden for to hverdage.",
+            "segments": ["kindergartens", "schools", "weddings", "other"],
+            "success_message": "Tak! Jeg vender tilbage inden for to hverdage."
+          }
+        }
+      ]
+    },
+    "gallery_access": {
+      "label": "Gallery access",
+      "notes": "UI ONLY. Code validation is not implemented — §15.2 is still open. See lib/gallery-auth.ts.",
+      "variants": [
+        {
+          "name": "Parent gallery",
+          "segment": null,
+          "blok": {
+            "_uid": "m-ga",
+            "component": "gallery_access",
+            "heading": "Galleri for forældre",
+            "instructions": "Indtast koden fra institutionen for at se billederne.",
+            "button_label": "Åbn galleri"
+          }
+        }
+      ]
+    },
+    "rich_text": {
+      "label": "Rich text",
+      "notes": "Used on About, Privacy and inside project bodies.",
+      "variants": [
+        {
+          "name": "Contained",
+          "segment": null,
+          "blok": {
+            "_uid": "mock-rt-1",
+            "component": "rich_text",
+            "width": "contained",
+            "text": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "heading",
+                  "attrs": {
+                    "level": 2
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Sådan arbejder jeg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Jeg fotograferer roligt og på børnenes præmisser. Ingen opstillede smil, ingen lange ventetider — jeg følger dagens rytme og fanger det, der alligevel sker."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Læs mere om "
+                    },
+                    {
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "/privacy",
+                            "linktype": "url"
+                          }
+                        }
+                      ],
+                      "text": "samtykke og privatliv"
+                    },
+                    {
+                      "type": "text",
+                      "text": " inden fotodagen."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Wide",
+          "segment": "kindergartens",
+          "blok": {
+            "_uid": "mock-rt-2",
+            "component": "rich_text",
+            "width": "wide",
+            "text": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Et bredere tekstfelt til længere afsnit. Bruges, når teksten står alene på siden uden billeder ved siden af."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "quote": {
+      "label": "Quote",
+      "notes": "Editorial recipe #5 — full-bleed image, centred italic serif quote.",
+      "variants": [
+        {
+          "name": "Over image",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "m-q",
+            "component": "quote",
+            "text": "Jeg fotograferer dagen, som den er — ikke som den burde se ud.",
+            "attribution": "Steffensen Foto",
+            "variant": "over-image",
+            "image": {
+              "id": 1,
+              "name": "",
+              "alt": null,
+              "focus": null,
+              "title": null,
+              "source": null,
+              "copyright": null,
+              "filename": "placeholder://2400x1400",
+              "fieldtype": "asset"
+            },
+            "image_alt": "Par i aftenlys set bagfra",
+            "overlay_strength": "strong",
+            "text_tone": "light"
+          }
+        }
+      ]
+    },
+    "spacer": {
+      "label": "Spacer",
+      "notes": "Deliberate breathing room between blocks.",
+      "variants": [
+        {
+          "name": "Medium",
+          "segment": null,
+          "blok": {
+            "_uid": "m-sp",
+            "component": "spacer",
+            "size": "medium"
+          }
+        }
+      ]
+    }
+  }
+}

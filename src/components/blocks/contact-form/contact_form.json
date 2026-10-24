@@ -1,0 +1,42 @@
+{
+  "name": "contact_form",
+  "display_name": "Contact form",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "heading": {
+      "type": "text",
+      "pos": 0
+    },
+    "intro": {
+      "type": "textarea",
+      "pos": 1
+    },
+    "segments": {
+      "type": "options",
+      "pos": 2,
+      "options": [
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "success_message": {
+      "type": "textarea",
+      "pos": 3
+    }
+  }
+}

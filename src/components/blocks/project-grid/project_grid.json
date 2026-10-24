@@ -1,0 +1,80 @@
+{
+  "name": "project_grid",
+  "display_name": "Project grid",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "segment": {
+      "type": "option",
+      "pos": 1,
+      "options": [
+        {
+          "name": "All",
+          "value": ""
+        },
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "projects": {
+      "type": "options",
+      "source": "internal_stories",
+      "folder_slug": "portfolio/",
+      "pos": 2,
+      "description": "Leave empty to show all projects, optionally filtered by segment."
+    },
+    "show_filter": {
+      "type": "boolean",
+      "pos": 3
+    },
+    "layout": {
+      "type": "option",
+      "pos": 4,
+      "default_value": "grid",
+      "options": [
+        {
+          "name": "Grid",
+          "value": "grid"
+        },
+        {
+          "name": "Wide",
+          "value": "wide"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

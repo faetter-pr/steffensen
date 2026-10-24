@@ -1,0 +1,27 @@
+{
+  "name": "rich_text",
+  "display_name": "Rich text",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "text": {
+      "type": "richtext",
+      "pos": 0
+    },
+    "width": {
+      "type": "option",
+      "pos": 1,
+      "default_value": "contained",
+      "options": [
+        {
+          "name": "Contained",
+          "value": "contained"
+        },
+        {
+          "name": "Wide",
+          "value": "wide"
+        }
+      ]
+    }
+  }
+}

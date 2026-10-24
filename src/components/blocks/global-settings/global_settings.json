@@ -1,0 +1,58 @@
+{
+  "name": "global_settings",
+  "display_name": "Global settings",
+  "is_root": true,
+  "is_nestable": false,
+  "schema": {
+    "site_name": {
+      "type": "text",
+      "pos": 0
+    },
+    "logo": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "pos": 1
+    },
+    "header_nav": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["nav_link"],
+      "pos": 2
+    },
+    "footer_nav": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["nav_link"],
+      "pos": 3
+    },
+    "socials": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["nav_link"],
+      "pos": 4
+    },
+    "default_seo": {
+      "type": "bloks",
+      "maximum": 1,
+      "restrict_components": true,
+      "component_whitelist": ["seo"],
+      "pos": 5
+    },
+    "contact_email": {
+      "type": "text",
+      "pos": 6
+    },
+    "phone": {
+      "type": "text",
+      "pos": 7
+    },
+    "service_area": {
+      "type": "text",
+      "pos": 8
+    },
+    "privacy_blurb": {
+      "type": "textarea",
+      "pos": 9
+    }
+  }
+}

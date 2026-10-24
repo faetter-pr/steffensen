@@ -1,0 +1,27 @@
+{
+  "name": "spacer",
+  "display_name": "Spacer",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "size": {
+      "type": "option",
+      "pos": 0,
+      "default_value": "medium",
+      "options": [
+        {
+          "name": "Small",
+          "value": "small"
+        },
+        {
+          "name": "Medium",
+          "value": "medium"
+        },
+        {
+          "name": "Large",
+          "value": "large"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "name": "package",
+  "display_name": "Package",
+  "is_root": true,
+  "is_nestable": false,
+  "schema": {
+    "title": {
+      "type": "text",
+      "required": true,
+      "pos": 0
+    },
+    "segment": {
+      "type": "option",
+      "pos": 1,
+      "options": [
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "description": {
+      "type": "textarea",
+      "pos": 2
+    },
+    "price_from": {
+      "type": "text",
+      "pos": 3
+    },
+    "price_unit": {
+      "type": "option",
+      "pos": 4,
+      "options": [
+        {
+          "name": "Per child",
+          "value": "per_child"
+        },
+        {
+          "name": "Per class",
+          "value": "per_class"
+        },
+        {
+          "name": "Flat",
+          "value": "flat"
+        }
+      ]
+    },
+    "included": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "included_item"
+      ],
+      "pos": 5
+    },
+    "highlight": {
+      "type": "boolean",
+      "pos": 6
+    },
+    "cta_label": {
+      "type": "text",
+      "pos": 7
+    },
+    "cta_link": {
+      "type": "multilink",
+      "pos": 8
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "seo",
+  "display_name": "SEO",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "title": {
+      "type": "text",
+      "pos": 0
+    },
+    "description": {
+      "type": "textarea",
+      "pos": 1
+    },
+    "og_image": {
+      "type": "text",
+      "pos": 2
+    },
+    "og_title": {
+      "type": "text",
+      "pos": 3
+    },
+    "og_description": {
+      "type": "textarea",
+      "pos": 4
+    },
+    "twitter_image": {
+      "type": "text",
+      "pos": 5
+    },
+    "twitter_title": {
+      "type": "text",
+      "pos": 6
+    },
+    "twitter_description": {
+      "type": "textarea",
+      "pos": 7
+    }
+  }
+}

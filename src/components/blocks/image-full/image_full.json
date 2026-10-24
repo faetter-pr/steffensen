@@ -1,0 +1,100 @@
+{
+  "name": "image_full",
+  "display_name": "Image (full)",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "image": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 0
+    },
+    "image_alt": {
+      "type": "text",
+      "required": true,
+      "pos": 1
+    },
+    "caption": {
+      "type": "text",
+      "pos": 2
+    },
+    "width": {
+      "type": "option",
+      "pos": 3,
+      "default_value": "full",
+      "options": [
+        {
+          "name": "Contained",
+          "value": "contained"
+        },
+        {
+          "name": "Wide",
+          "value": "wide"
+        },
+        {
+          "name": "Full bleed",
+          "value": "full"
+        }
+      ]
+    },
+    "aspect": {
+      "type": "option",
+      "pos": 4,
+      "default_value": "auto",
+      "options": [
+        {
+          "name": "Auto",
+          "value": "auto"
+        },
+        {
+          "name": "3:2",
+          "value": "3-2"
+        },
+        {
+          "name": "16:9",
+          "value": "16-9"
+        },
+        {
+          "name": "4:5",
+          "value": "4-5"
+        }
+      ]
+    },
+    "max_height": {
+      "type": "option",
+      "pos": 5,
+      "default_value": "none",
+      "options": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "70svh",
+          "value": "70svh"
+        },
+        {
+          "name": "90svh",
+          "value": "90svh"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "testimonial",
+  "display_name": "Testimonial",
+  "is_root": true,
+  "is_nestable": false,
+  "schema": {
+    "quote": {
+      "type": "textarea",
+      "required": true,
+      "pos": 0
+    },
+    "name": {
+      "type": "text",
+      "pos": 1
+    },
+    "role": {
+      "type": "text",
+      "pos": 2
+    },
+    "organisation": {
+      "type": "text",
+      "pos": 3
+    },
+    "segment": {
+      "type": "option",
+      "pos": 4,
+      "options": [
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "portrait": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "pos": 5
+    },
+    "portrait_alt": {
+      "type": "text",
+      "pos": 6
+    }
+  }
+}

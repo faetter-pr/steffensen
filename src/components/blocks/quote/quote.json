@@ -1,0 +1,98 @@
+{
+  "name": "quote",
+  "display_name": "Quote",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "text": {
+      "type": "textarea",
+      "required": true,
+      "pos": 0
+    },
+    "attribution": {
+      "type": "text",
+      "pos": 1
+    },
+    "overlay_strength": {
+      "type": "option",
+      "pos": 20,
+      "default_value": "medium",
+      "options": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "Light",
+          "value": "light"
+        },
+        {
+          "name": "Medium",
+          "value": "medium"
+        },
+        {
+          "name": "Strong",
+          "value": "strong"
+        }
+      ],
+      "description": "Darkens the photo behind text. Bright photos may still fail contrast — check the result."
+    },
+    "text_tone": {
+      "type": "option",
+      "pos": 21,
+      "default_value": "light",
+      "options": [
+        {
+          "name": "Light text",
+          "value": "light"
+        },
+        {
+          "name": "Dark text",
+          "value": "dark"
+        }
+      ],
+      "description": "Light text suits dark photos; dark text suits pale ones."
+    },
+    "variant": {
+      "type": "option",
+      "pos": 2,
+      "default_value": "plain",
+      "options": [
+        {
+          "name": "Plain",
+          "value": "plain"
+        },
+        {
+          "name": "Over image",
+          "value": "over-image"
+        }
+      ]
+    },
+    "image": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "pos": 3,
+      "description": "Only used by the 'Over image' variant."
+    },
+    "image_alt": {
+      "type": "text",
+      "pos": 4
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

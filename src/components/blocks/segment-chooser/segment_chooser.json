@@ -1,0 +1,34 @@
+{
+  "name": "segment_chooser",
+  "display_name": "Segment chooser",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "items": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": ["segment_card"],
+      "pos": 1
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

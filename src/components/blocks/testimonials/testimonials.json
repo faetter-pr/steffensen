@@ -1,0 +1,49 @@
+{
+  "name": "testimonials",
+  "display_name": "Testimonials",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "pos": 0
+    },
+    "testimonials": {
+      "type": "options",
+      "source": "internal_stories",
+      "folder_slug": "testimonials/",
+      "pos": 1
+    },
+    "layout": {
+      "type": "option",
+      "pos": 2,
+      "default_value": "grid",
+      "options": [
+        {
+          "name": "Grid",
+          "value": "grid"
+        },
+        {
+          "name": "Single",
+          "value": "single"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

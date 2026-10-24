@@ -1,0 +1,66 @@
+{
+  "name": "text_image",
+  "display_name": "Text + image",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "image": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 0
+    },
+    "image_alt": {
+      "type": "text",
+      "required": true,
+      "pos": 1
+    },
+    "headline": {
+      "type": "text",
+      "pos": 2
+    },
+    "text": {
+      "type": "richtext",
+      "pos": 3
+    },
+    "cta_label": {
+      "type": "text",
+      "pos": 4
+    },
+    "cta_link": {
+      "type": "multilink",
+      "pos": 5
+    },
+    "image_side": {
+      "type": "option",
+      "pos": 6,
+      "default_value": "left",
+      "options": [
+        {
+          "name": "Left",
+          "value": "left"
+        },
+        {
+          "name": "Right",
+          "value": "right"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

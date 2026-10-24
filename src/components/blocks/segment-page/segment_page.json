@@ -1,0 +1,42 @@
+{
+  "name": "segment_page",
+  "display_name": "Segment page",
+  "is_root": true,
+  "is_nestable": false,
+  "schema": {
+    "segment": {
+      "type": "option",
+      "required": true,
+      "pos": 0,
+      "options": [
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "body": {
+      "type": "bloks",
+      "pos": 1
+    },
+    "seo": {
+      "type": "bloks",
+      "maximum": 1,
+      "restrict_components": true,
+      "component_whitelist": ["seo"],
+      "pos": 2
+    }
+  }
+}

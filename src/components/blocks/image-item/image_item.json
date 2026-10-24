@@ -1,0 +1,52 @@
+{
+  "name": "image_item",
+  "display_name": "Image",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "asset": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 0,
+      "description": "Only upload images with documented consent."
+    },
+    "alt": {
+      "type": "text",
+      "required": true,
+      "pos": 1,
+      "description": "Describe the activity or scene. Never a child's name."
+    },
+    "caption": {
+      "type": "text",
+      "pos": 2
+    },
+    "featured": {
+      "type": "boolean",
+      "pos": 3
+    },
+    "aspect": {
+      "type": "option",
+      "pos": 4,
+      "default_value": "auto",
+      "options": [
+        {
+          "name": "Auto",
+          "value": "auto"
+        },
+        {
+          "name": "3:2",
+          "value": "3-2"
+        },
+        {
+          "name": "16:9",
+          "value": "16-9"
+        },
+        {
+          "name": "4:5",
+          "value": "4-5"
+        }
+      ]
+    }
+  }
+}

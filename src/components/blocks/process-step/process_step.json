@@ -1,0 +1,17 @@
+{
+  "name": "process_step",
+  "display_name": "Process step",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "title": {
+      "type": "text",
+      "required": true,
+      "pos": 0
+    },
+    "description": {
+      "type": "textarea",
+      "pos": 1
+    }
+  }
+}

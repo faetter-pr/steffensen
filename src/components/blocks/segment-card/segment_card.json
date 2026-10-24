@@ -1,0 +1,91 @@
+{
+  "name": "segment_card",
+  "display_name": "Segment card",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "label": {
+      "type": "text",
+      "required": true,
+      "pos": 0
+    },
+    "image": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 1
+    },
+    "image_alt": {
+      "type": "text",
+      "required": true,
+      "pos": 2
+    },
+    "link": {
+      "type": "multilink",
+      "required": true,
+      "pos": 3
+    },
+    "segment": {
+      "type": "option",
+      "pos": 4,
+      "options": [
+        {
+          "name": "Kindergartens",
+          "value": "kindergartens"
+        },
+        {
+          "name": "Schools",
+          "value": "schools"
+        },
+        {
+          "name": "Weddings",
+          "value": "weddings"
+        },
+        {
+          "name": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    "overlay_strength": {
+      "type": "option",
+      "pos": 20,
+      "default_value": "medium",
+      "options": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "Light",
+          "value": "light"
+        },
+        {
+          "name": "Medium",
+          "value": "medium"
+        },
+        {
+          "name": "Strong",
+          "value": "strong"
+        }
+      ],
+      "description": "Darkens the photo behind text. Bright photos may still fail contrast — check the result."
+    },
+    "text_tone": {
+      "type": "option",
+      "pos": 21,
+      "default_value": "light",
+      "options": [
+        {
+          "name": "Light text",
+          "value": "light"
+        },
+        {
+          "name": "Dark text",
+          "value": "dark"
+        }
+      ],
+      "description": "Light text suits dark photos; dark text suits pale ones."
+    }
+  }
+}

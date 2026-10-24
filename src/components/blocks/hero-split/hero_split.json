@@ -1,0 +1,74 @@
+{
+  "name": "hero_split",
+  "display_name": "Hero (split)",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "image": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 0
+    },
+    "image_alt": {
+      "type": "text",
+      "required": true,
+      "pos": 1
+    },
+    "headline": {
+      "type": "text",
+      "pos": 2
+    },
+    "subline": {
+      "type": "textarea",
+      "pos": 3
+    },
+    "cta_label": {
+      "type": "text",
+      "pos": 4
+    },
+    "cta_link": {
+      "type": "multilink",
+      "pos": 5
+    },
+    "secondary_cta_label": {
+      "type": "text",
+      "pos": 6
+    },
+    "secondary_cta_link": {
+      "type": "multilink",
+      "pos": 7
+    },
+    "image_side": {
+      "type": "option",
+      "pos": 8,
+      "default_value": "right",
+      "options": [
+        {
+          "name": "Right",
+          "value": "right"
+        },
+        {
+          "name": "Left",
+          "value": "left"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

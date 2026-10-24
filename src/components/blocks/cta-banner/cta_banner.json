@@ -1,0 +1,75 @@
+{
+  "name": "cta_banner",
+  "display_name": "CTA banner",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "headline": {
+      "type": "text",
+      "required": true,
+      "pos": 0
+    },
+    "text": {
+      "type": "textarea",
+      "pos": 1
+    },
+    "cta_label": {
+      "type": "text",
+      "pos": 2
+    },
+    "cta_link": {
+      "type": "multilink",
+      "pos": 3
+    },
+    "background": {
+      "type": "option",
+      "pos": 4,
+      "default_value": "soft",
+      "options": [
+        {
+          "name": "Soft",
+          "value": "soft"
+        },
+        {
+          "name": "Accent",
+          "value": "accent"
+        },
+        {
+          "name": "Ink",
+          "value": "ink"
+        }
+      ]
+    },
+    "variant": {
+      "type": "option",
+      "pos": 5,
+      "default_value": "minimal",
+      "options": [
+        {
+          "name": "Minimal",
+          "value": "minimal"
+        },
+        {
+          "name": "Filled",
+          "value": "filled"
+        }
+      ]
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "trust_item",
+  "display_name": "Trust item",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "text": {
+      "type": "text",
+      "required": true,
+      "pos": 0
+    },
+    "icon": {
+      "type": "option",
+      "pos": 1,
+      "default_value": "check",
+      "options": [
+        {
+          "name": "Check",
+          "value": "check"
+        },
+        {
+          "name": "Shield",
+          "value": "shield"
+        },
+        {
+          "name": "Clock",
+          "value": "clock"
+        },
+        {
+          "name": "Camera",
+          "value": "camera"
+        },
+        {
+          "name": "Heart",
+          "value": "heart"
+        },
+        {
+          "name": "Users",
+          "value": "users"
+        }
+      ]
+    }
+  }
+}

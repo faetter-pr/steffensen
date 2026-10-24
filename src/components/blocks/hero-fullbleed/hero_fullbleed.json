@@ -1,0 +1,92 @@
+{
+  "name": "hero_fullbleed",
+  "display_name": "Hero (full-bleed)",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "image": {
+      "type": "asset",
+      "filetypes": ["images"],
+      "required": true,
+      "pos": 0
+    },
+    "image_alt": {
+      "type": "text",
+      "required": true,
+      "pos": 1,
+      "description": "Describe the scene. Never a child's name."
+    },
+    "headline": {
+      "type": "text",
+      "pos": 2
+    },
+    "subline": {
+      "type": "textarea",
+      "pos": 3
+    },
+    "cta_label": {
+      "type": "text",
+      "pos": 4
+    },
+    "cta_link": {
+      "type": "multilink",
+      "pos": 5
+    },
+    "overlay_strength": {
+      "type": "option",
+      "pos": 20,
+      "default_value": "medium",
+      "options": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "Light",
+          "value": "light"
+        },
+        {
+          "name": "Medium",
+          "value": "medium"
+        },
+        {
+          "name": "Strong",
+          "value": "strong"
+        }
+      ],
+      "description": "Darkens the photo behind text. Bright photos may still fail contrast — check the result."
+    },
+    "text_tone": {
+      "type": "option",
+      "pos": 21,
+      "default_value": "light",
+      "options": [
+        {
+          "name": "Light text",
+          "value": "light"
+        },
+        {
+          "name": "Dark text",
+          "value": "dark"
+        }
+      ],
+      "description": "Light text suits dark photos; dark text suits pale ones."
+    },
+    "motion": {
+      "type": "option",
+      "pos": 90,
+      "default_value": "default",
+      "options": [
+        {
+          "name": "Default",
+          "value": "default"
+        },
+        {
+          "name": "None",
+          "value": "none"
+        }
+      ],
+      "description": "Switch animation off for this block."
+    }
+  }
+}
