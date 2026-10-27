@@ -66,14 +66,14 @@ export function HeroFullbleed({
 
       <div className={cn("relative w-full px-5 pb-14 sm:px-8 sm:pb-20", tone.text)}>
         <div className="flex items-end justify-between gap-8">
-          {lines.length ? (
-            <LineReveal
-              lines={lines}
-              as="h1"
-              disabled={off}
-              className="max-w-[18ch] text-(length:--text-hero) leading-[1.02] font-light"
-            />
-          ) : null}
+
+
+        {blok.headline ? (
+          <Reveal delay={off ? 0 : 0.2} y={12} disabled={off}>
+            <h1 className="mt-5 text-2xl sm:text-4xl">{blok.subline}</h1>
+          </Reveal>
+        ) : null}
+
 
           {/* Scroll cue, bottom-right. Fades in after the headline. */}
           <Reveal
