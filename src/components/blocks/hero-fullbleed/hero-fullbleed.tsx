@@ -70,7 +70,7 @@ export function HeroFullbleed({
 
         {blok.headline ? (
           <Reveal delay={off ? 0 : 0.2} y={12} disabled={off}>
-            <h1 className="mt-5 text-2xl sm:text-4xl">{blok.subline}</h1>
+            <h1 className="mt-5 text-2xl sm:text-4xl">{blok.headline}</h1>
           </Reveal>
         ) : null}
 
