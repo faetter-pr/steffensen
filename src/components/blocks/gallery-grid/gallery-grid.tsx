@@ -2,8 +2,8 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 import { PhotoGrid } from "@/components/photo/photo-grid";
 import { gapClass, motionDisabled } from "@/lib/storyblok/editorial";
-import { toLightboxItems } from "@/lib/storyblok/image-item";
-import type { GalleryGridStoryblok, ImageItemStoryblok } from "@/lib/storyblok/types";
+import { normalizeImageItems, toLightboxItems } from "@/lib/storyblok/image-item";
+import type { GalleryGridStoryblok } from "@/lib/storyblok/types";
 import { cn } from "@/lib/utils";
 
 /**
@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
  * the container; `contained` keeps the max width. Clicking opens the lightbox.
  */
 export function GalleryGrid({ blok }: { blok: GalleryGridStoryblok }) {
-  const items = toLightboxItems((blok.images ?? []) as ImageItemStoryblok[]);
+  const items = toLightboxItems(normalizeImageItems(blok.images ?? []));
   if (!items.length) return null;
 
   const off = motionDisabled(blok.motion);

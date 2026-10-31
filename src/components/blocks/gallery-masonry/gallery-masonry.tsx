@@ -1,12 +1,12 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
 import { PhotoGrid } from "@/components/photo/photo-grid";
-import type { GalleryMasonryStoryblok, ImageItemStoryblok } from "@/lib/storyblok/types";
-import { toLightboxItems } from "@/lib/storyblok/image-item";
+import type { GalleryMasonryStoryblok } from "@/lib/storyblok/types";
+import { normalizeImageItems, toLightboxItems } from "@/lib/storyblok/image-item";
 
 /** gallery_masonry (architecture.md §4, §13.4 "selected work"). */
 export function GalleryMasonry({ blok }: { blok: GalleryMasonryStoryblok }) {
-  const items = toLightboxItems((blok.images ?? []) as ImageItemStoryblok[]);
+  const items = toLightboxItems(normalizeImageItems(blok.images ?? []));
   if (!items.length) return null;
 
   return (

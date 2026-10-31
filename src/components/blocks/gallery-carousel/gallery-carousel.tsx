@@ -1,12 +1,12 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
 import { PhotoCarousel } from "@/components/photo/photo-carousel";
-import type { GalleryCarouselStoryblok, ImageItemStoryblok } from "@/lib/storyblok/types";
-import { toLightboxItems } from "@/lib/storyblok/image-item";
+import type { GalleryCarouselStoryblok } from "@/lib/storyblok/types";
+import { normalizeImageItems, toLightboxItems } from "@/lib/storyblok/image-item";
 
 /** gallery_carousel (architecture.md §4). CSS scroll-snap; see photo-carousel.tsx. */
 export function GalleryCarousel({ blok }: { blok: GalleryCarouselStoryblok }) {
-  const items = toLightboxItems((blok.images ?? []) as ImageItemStoryblok[]);
+  const items = toLightboxItems(normalizeImageItems(blok.images ?? []));
   if (!items.length) return null;
 
   return (
