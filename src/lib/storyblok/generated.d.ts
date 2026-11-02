@@ -3,10 +3,17 @@ import {StoryblokStory} from 'storyblok-generate-ts'
 export interface ContactFormStoryblok {
   heading?: string;
   intro?: string;
-  segments?: ("" | "kindergartens" | "schools" | "weddings" | "other")[];
+  types?: ContactTypeStoryblok[];
   success_message?: string;
   _uid: string;
   component: "contact_form";
+  [k: string]: unknown;
+}
+
+export interface ContactTypeStoryblok {
+  label: string;
+  _uid: string;
+  component: "contact_type";
   [k: string]: unknown;
 }
 
@@ -279,6 +286,7 @@ export interface PackageStoryblok {
 export interface PageStoryblok {
   body?: (
     | ContactFormStoryblok
+    | ContactTypeStoryblok
     | CtaBannerStoryblok
     | FaqItemStoryblok
     | FaqStoryblok
@@ -365,6 +373,7 @@ export interface ProjectStoryblok {
   intro?: RichtextStoryblok;
   body?: (
     | ContactFormStoryblok
+    | ContactTypeStoryblok
     | CtaBannerStoryblok
     | FaqItemStoryblok
     | FaqStoryblok
@@ -458,6 +467,7 @@ export interface SegmentPageStoryblok {
   segment: "" | "kindergartens" | "schools" | "weddings" | "other";
   body?: (
     | ContactFormStoryblok
+    | ContactTypeStoryblok
     | CtaBannerStoryblok
     | FaqItemStoryblok
     | FaqStoryblok

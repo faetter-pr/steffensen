@@ -1,0 +1,2993 @@
+[
+  {
+    "name": "contact_form",
+    "display_name": "Contact form",
+    "description": null,
+    "created_at": "2026-10-24T17:35:44.255Z",
+    "updated_at": "2026-10-30T14:52:36.550Z",
+    "id": 234183656476738,
+    "schema": {
+      "heading": {
+        "type": "text",
+        "pos": 0,
+        "id": "rWCo25uFSNGutFukPZHHhg"
+      },
+      "intro": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "OZqCib_QS0-d2w-vY4mt6A"
+      },
+      "segments": {
+        "type": "options",
+        "pos": 2,
+        "options": [
+          {
+            "name": "Børnehave",
+            "value": "boernehave",
+            "_uid": "f8ce8b84-c74b-459c-a7da-59625f068080"
+          },
+          {
+            "name": "Familie",
+            "value": "familie",
+            "_uid": "74e78bab-d9b0-4f47-832b-ff6fc1d3f2c3"
+          },
+          {
+            "name": "Børnefotografering",
+            "value": "boernefotografering",
+            "_uid": "d1971d4b-d4f0-4a78-8df0-eb58294d3d48"
+          },
+          {
+            "name": "Andet",
+            "value": "other",
+            "_uid": "96cf727e-a1e9-40f4-8467-c790eb0c783d"
+          }
+        ],
+        "id": "2OhVhLI1RRWEZZ5FF0AsxQ",
+        "default_value": "[\"børnehave\", \"familie\", \"børnefotografering\", \"other\"]"
+      },
+      "success_message": {
+        "type": "textarea",
+        "pos": 3,
+        "id": "Cv_e6BkhTiqB06LEy6qTJA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Contact form",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "Contact_Form_1",
+    "display_name": null,
+    "description": "kontakt block",
+    "created_at": "2026-10-30T17:33:51.860Z",
+    "updated_at": "2026-10-30T17:43:59.764Z",
+    "id": 236306562498975,
+    "schema": {
+      "Headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "c3zrXoYAQdatQWLtbbpoFg"
+      },
+      "Description": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "KtiARKZZSsWIoRN2I9hZRw"
+      },
+      "Form_fields": {
+        "type": "bloks",
+        "pos": 2,
+        "id": "pzKv-jCHSF67-u_HqJFDTQ"
+      },
+      "Submit_label": {
+        "type": "text",
+        "pos": 3,
+        "id": "ekZVUZa-TFiF7rtHo39Ciw"
+      },
+      "Success_message": {
+        "type": "textarea",
+        "pos": 4,
+        "id": "BLihxxU0SnKAbM3V9mjZzQ"
+      },
+      "recipient_email": {
+        "type": "text",
+        "pos": 5,
+        "id": "S9w6C4dXQRCm52n_ZeU2aw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Contact_Form_1",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "Contact_form_field",
+    "display_name": null,
+    "description": "",
+    "created_at": "2026-10-30T17:44:51.585Z",
+    "updated_at": "2026-10-30T17:47:58.583Z",
+    "id": 236309264736672,
+    "schema": {
+      "multiple_choice": {
+        "type": "options",
+        "pos": 0,
+        "options": [
+          {
+            "_uid": "a2840c95-a65e-431c-84f8-920eefcaf9e5",
+            "name": "Børnehave",
+            "value": "boernehave"
+          },
+          {
+            "_uid": "efb9a22d-8419-4708-a3fb-d01ac1274058",
+            "value": "familie",
+            "name": "Familie"
+          },
+          {
+            "_uid": "85b881b7-8a05-4110-9720-4a8eef1e698f",
+            "value": "boernefotografering",
+            "name": "Børnefotografering"
+          },
+          {
+            "_uid": "39b4fe87-de21-42cd-afaf-d839a87c96fc",
+            "value": "nyfoedt",
+            "name": "Nyfødt"
+          },
+          {
+            "_uid": "87e2da89-a3c1-4290-965e-e7e1e300af5a",
+            "value": "Andet",
+            "name": "Andet"
+          }
+        ],
+        "id": "j1JaBb3zSRWV93lD4NwP2w"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Contact_form_field",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "cta_banner",
+    "display_name": "CTA banner",
+    "description": null,
+    "created_at": "2026-10-24T17:35:44.257Z",
+    "updated_at": "2026-10-24T17:35:44.257Z",
+    "id": 234183656480835,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "PdBuBXA1RI-0QZKiu_QZ1g"
+      },
+      "text": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "basI4JXXSuuFRE18ehFxKg"
+      },
+      "cta_label": {
+        "type": "text",
+        "pos": 2,
+        "id": "sKqVDSt1S2S4QoyXRSAjsw"
+      },
+      "cta_link": {
+        "type": "multilink",
+        "pos": 3,
+        "id": "dei4UafJSyWvfozzndKLcQ"
+      },
+      "background": {
+        "type": "option",
+        "pos": 4,
+        "default_value": "soft",
+        "options": [
+          {
+            "name": "Soft",
+            "value": "soft"
+          },
+          {
+            "name": "Accent",
+            "value": "accent"
+          },
+          {
+            "name": "Ink",
+            "value": "ink"
+          }
+        ],
+        "id": "pt5qVdvSQrqATaUrhwFCoQ"
+      },
+      "variant": {
+        "type": "option",
+        "pos": 5,
+        "default_value": "minimal",
+        "options": [
+          {
+            "name": "Minimal",
+            "value": "minimal"
+          },
+          {
+            "name": "Filled",
+            "value": "filled"
+          }
+        ],
+        "id": "0_MvUDL-Tea23a5Z3YeyAw"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "kNl6xOqAQlm0Em201LcBiQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "CTA banner",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "faq",
+    "display_name": "FAQ",
+    "description": null,
+    "created_at": "2026-10-24T17:35:48.251Z",
+    "updated_at": "2026-10-24T17:35:48.251Z",
+    "id": 234183672836186,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "vksopSg0QiW2DV34E_7NgA"
+      },
+      "items": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "faq_item"
+        ],
+        "pos": 1,
+        "id": "6pfSJChXS46jTSOvzugc2Q"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "QrtoS0c_TrCkV28iQWoaOQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "FAQ",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "faq_item",
+    "display_name": "FAQ item",
+    "description": null,
+    "created_at": "2026-10-24T17:35:45.174Z",
+    "updated_at": "2026-10-24T17:35:45.174Z",
+    "id": 234183660236871,
+    "schema": {
+      "question": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "Z4bm8A2jR-2vnauTS9tX6A"
+      },
+      "answer": {
+        "type": "richtext",
+        "required": true,
+        "pos": 1,
+        "id": "vIuBtbL8RLCt-yeisqTKCg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "FAQ item",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "featured_projects",
+    "display_name": "Featured projects",
+    "description": null,
+    "created_at": "2026-10-24T17:35:45.174Z",
+    "updated_at": "2026-10-24T17:35:45.174Z",
+    "id": 234183660236870,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "ie9GvghhSfKXuYHb7SeRBA"
+      },
+      "intro": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "XRVx7C1bQ_q1qP6dqcKiMQ"
+      },
+      "projects": {
+        "type": "options",
+        "source": "internal_stories",
+        "folder_slug": "portfolio/",
+        "pos": 2,
+        "id": "FAH0L44HTeSWJcbyA1ZqBg"
+      },
+      "cta_label": {
+        "type": "text",
+        "pos": 3,
+        "id": "4x6WO5PFRtmIdmRPR2ULOw"
+      },
+      "cta_link": {
+        "type": "multilink",
+        "pos": 4,
+        "id": "phPlz38vTPiD0B7N5nP3xA"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "g3_8SQ6JQEep6SmotiJBMg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Featured projects",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "gallery_access",
+    "display_name": "Gallery access",
+    "description": null,
+    "created_at": "2026-10-24T17:35:45.173Z",
+    "updated_at": "2026-10-24T17:35:45.173Z",
+    "id": 234183660232772,
+    "schema": {
+      "heading": {
+        "type": "text",
+        "pos": 0,
+        "id": "MZn-APP-Q7e2l_zEslBZEg"
+      },
+      "instructions": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "f7zHC7ilTYWabc2NquEzog"
+      },
+      "button_label": {
+        "type": "text",
+        "pos": 2,
+        "id": "4EeBhtS0SrWsrNxYeGgs7g"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Gallery access",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "gallery_carousel",
+    "display_name": "Gallery (carousel)",
+    "description": null,
+    "created_at": "2026-10-24T17:35:48.252Z",
+    "updated_at": "2026-10-24T17:35:48.252Z",
+    "id": 234183672844379,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "6bFW9UtwSwOva5Ss4cbbJA"
+      },
+      "images": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "image_item"
+        ],
+        "pos": 1,
+        "id": "WAcI0SwFQlu1wuh18LxUeg"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "X_V59NcdTLqNtVRkMPPgRw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Gallery (carousel)",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "gallery_grid",
+    "display_name": "Gallery (grid)",
+    "description": null,
+    "created_at": "2026-10-24T17:35:49.188Z",
+    "updated_at": "2026-10-24T17:35:49.188Z",
+    "id": 234183676678238,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "Sh_WVNUxRpuMPnEWsuuwNA"
+      },
+      "images": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "image_item"
+        ],
+        "pos": 1,
+        "id": "kw-NC0uCRxqrGjeybmtAeQ"
+      },
+      "columns": {
+        "type": "option",
+        "pos": 2,
+        "default_value": "3",
+        "options": [
+          {
+            "name": "2",
+            "value": "2"
+          },
+          {
+            "name": "3",
+            "value": "3"
+          },
+          {
+            "name": "4",
+            "value": "4"
+          }
+        ],
+        "id": "SkDMtzAIQuepLXGNls63vg"
+      },
+      "gap": {
+        "type": "option",
+        "pos": 3,
+        "default_value": "frame",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "2px",
+            "value": "frame"
+          },
+          {
+            "name": "8px",
+            "value": "loose"
+          }
+        ],
+        "id": "VuLQ6_csQuKBzOO6FCes_w"
+      },
+      "aspect": {
+        "type": "option",
+        "pos": 4,
+        "default_value": "square",
+        "options": [
+          {
+            "name": "Square",
+            "value": "square"
+          },
+          {
+            "name": "Portrait",
+            "value": "portrait"
+          },
+          {
+            "name": "Landscape",
+            "value": "landscape"
+          },
+          {
+            "name": "Original",
+            "value": "original"
+          }
+        ],
+        "id": "8XJv89T9QwCZuTkUj9djLQ"
+      },
+      "variant": {
+        "type": "option",
+        "pos": 5,
+        "default_value": "contained",
+        "options": [
+          {
+            "name": "Contained",
+            "value": "contained"
+          },
+          {
+            "name": "Edge to edge",
+            "value": "edge-to-edge"
+          },
+          {
+            "name": "Strip of 3",
+            "value": "strip-3"
+          }
+        ],
+        "id": "GEKMhJI_SYqyNm9_ujzZCA"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "iqRt3efpTtGWqdIW4Xtb1w"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Gallery (grid)",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "gallery_masonry",
+    "display_name": "Gallery (masonry)",
+    "description": null,
+    "created_at": "2026-10-24T17:35:49.172Z",
+    "updated_at": "2026-10-30T14:46:31.457Z",
+    "id": 234183676612700,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "0gjMNrY0TIquMvjNdHthrQ"
+      },
+      "images": {
+        "type": "multiasset",
+        "restrict_components": true,
+        "pos": 1,
+        "id": "eKQpljIHSdqIwsqFcV_LCQ",
+        "restrict_type": "",
+        "component_group_whitelist": [],
+        "component_group_denylist": [],
+        "component_tag_whitelist": [],
+        "component_tag_denylist": [],
+        "component_whitelist": [],
+        "component_denylist": [],
+        "minimum": 1,
+        "maximum": 100,
+        "filetypes": [
+          "images"
+        ],
+        "asset_folder_id": 236255972490024
+      },
+      "columns": {
+        "type": "option",
+        "pos": 2,
+        "default_value": "3",
+        "options": [
+          {
+            "name": "2",
+            "value": "2"
+          },
+          {
+            "name": "3",
+            "value": "3"
+          },
+          {
+            "name": "4",
+            "value": "4"
+          }
+        ],
+        "id": "tTY-pl_jTX604CnwALdcQw"
+      },
+      "gap": {
+        "type": "option",
+        "pos": 3,
+        "default_value": "frame",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "2px",
+            "value": "frame"
+          },
+          {
+            "name": "8px",
+            "value": "loose"
+          }
+        ],
+        "id": "T_b4o62FQGaOlrGX4H78sA"
+      },
+      "edge_to_edge": {
+        "type": "boolean",
+        "pos": 4,
+        "id": "TIyhPJWMS7iy4dXEqhTCDA"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "VxCvmTHuTyKaM-3KyX6T3Q"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Gallery (masonry)",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "global_settings",
+    "display_name": "Global settings",
+    "description": null,
+    "created_at": "2026-10-24T17:35:49.191Z",
+    "updated_at": "2026-10-24T17:35:49.191Z",
+    "id": 234183676690527,
+    "schema": {
+      "site_name": {
+        "type": "text",
+        "pos": 0,
+        "id": "yADD6ADwT6ukPkhigSyO_Q"
+      },
+      "logo": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "pos": 1,
+        "id": "F5xEGABCQFy4cvGylfrWRA"
+      },
+      "header_nav": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "nav_link"
+        ],
+        "pos": 2,
+        "id": "8u7X2MyHQoS-5_xlTslnbQ"
+      },
+      "footer_nav": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "nav_link"
+        ],
+        "pos": 3,
+        "id": "pysayVKFRRqC-paiol7tBw"
+      },
+      "socials": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "nav_link"
+        ],
+        "pos": 4,
+        "id": "fTAOyERVQea_NHRakgnVmQ"
+      },
+      "default_seo": {
+        "type": "bloks",
+        "maximum": 1,
+        "restrict_components": true,
+        "component_whitelist": [
+          "seo"
+        ],
+        "pos": 5,
+        "id": "QlDgc91UQL6HxzzI73cA6Q"
+      },
+      "contact_email": {
+        "type": "text",
+        "pos": 6,
+        "id": "PKRhKi60Sf-3XalnnDLlkA"
+      },
+      "phone": {
+        "type": "text",
+        "pos": 7,
+        "id": "s98sFYmGSA-5TMCYtQ__8A"
+      },
+      "service_area": {
+        "type": "text",
+        "pos": 8,
+        "id": "KPIpFvqKRIiqMZik0a7sFA"
+      },
+      "privacy_blurb": {
+        "type": "textarea",
+        "pos": 9,
+        "id": "a3Sl5MhcRmCHc_XaCjRQJA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Global settings",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "hero_fullbleed",
+    "display_name": "Hero (full-bleed)",
+    "description": null,
+    "created_at": "2026-10-24T17:35:45.174Z",
+    "updated_at": "2026-10-24T17:35:45.174Z",
+    "id": 234183660232773,
+    "schema": {
+      "image": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 0,
+        "id": "9kAb0V4SSxe41_cD5Mjo8A"
+      },
+      "image_alt": {
+        "type": "text",
+        "required": true,
+        "pos": 1,
+        "description": "Describe the scene. Never a child's name.",
+        "id": "GAIhhpgpT3OmAk7Usq_GNA"
+      },
+      "headline": {
+        "type": "text",
+        "pos": 2,
+        "id": "_Fizxn6bQ_2KTkMK1ZQW0w"
+      },
+      "subline": {
+        "type": "textarea",
+        "pos": 3,
+        "id": "RTULSMbmT3CsNsRV31dpEQ"
+      },
+      "cta_label": {
+        "type": "text",
+        "pos": 4,
+        "id": "WX-iKC0LTQiCr6HC7VWujQ"
+      },
+      "cta_link": {
+        "type": "multilink",
+        "pos": 5,
+        "id": "qTH_QO7YQpS6MMooCGaSkA"
+      },
+      "overlay_strength": {
+        "type": "option",
+        "pos": 20,
+        "default_value": "medium",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Strong",
+            "value": "strong"
+          }
+        ],
+        "description": "Darkens the photo behind text. Bright photos may still fail contrast — check the result.",
+        "id": "a2eAiyNrQt6o1_BaObcXGw"
+      },
+      "text_tone": {
+        "type": "option",
+        "pos": 21,
+        "default_value": "light",
+        "options": [
+          {
+            "name": "Light text",
+            "value": "light"
+          },
+          {
+            "name": "Dark text",
+            "value": "dark"
+          }
+        ],
+        "description": "Light text suits dark photos; dark text suits pale ones.",
+        "id": "sO_bsCwEQTe18_A2thzOoA"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "RZTKYhGyTN-g_5JrPHC8QA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Hero (full-bleed)",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "hero_split",
+    "display_name": "Hero (split)",
+    "description": null,
+    "created_at": "2026-10-24T17:35:45.265Z",
+    "updated_at": "2026-10-24T17:35:45.265Z",
+    "id": 234183660609608,
+    "schema": {
+      "image": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 0,
+        "id": "zKyDWDvfTDqXKQkf_14CeQ"
+      },
+      "image_alt": {
+        "type": "text",
+        "required": true,
+        "pos": 1,
+        "id": "ZIlvpbwwT8yu9sP3BwARTA"
+      },
+      "headline": {
+        "type": "text",
+        "pos": 2,
+        "id": "m8rLsE2XTnGRHszd-2mazg"
+      },
+      "subline": {
+        "type": "textarea",
+        "pos": 3,
+        "id": "jt10c0xxT9ewUd4V0K783Q"
+      },
+      "cta_label": {
+        "type": "text",
+        "pos": 4,
+        "id": "BupASlHQSpOn_8tU1DJNuw"
+      },
+      "cta_link": {
+        "type": "multilink",
+        "pos": 5,
+        "id": "xQc7yR48S5GxOUnx8zERyw"
+      },
+      "secondary_cta_label": {
+        "type": "text",
+        "pos": 6,
+        "id": "Cu8yDMqdR2-2zts_79RqsA"
+      },
+      "secondary_cta_link": {
+        "type": "multilink",
+        "pos": 7,
+        "id": "-WwPNVZXSPKjFji2DYd-RA"
+      },
+      "image_side": {
+        "type": "option",
+        "pos": 8,
+        "default_value": "right",
+        "options": [
+          {
+            "name": "Right",
+            "value": "right"
+          },
+          {
+            "name": "Left",
+            "value": "left"
+          }
+        ],
+        "id": "SwMisqYqSaCyTfV1fbrtSg"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "s35qLZMmQNaslbeMHyx65A"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Hero (split)",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "image_full",
+    "display_name": "Image (full)",
+    "description": null,
+    "created_at": "2026-10-24T17:35:45.266Z",
+    "updated_at": "2026-10-24T17:35:45.266Z",
+    "id": 234183660613705,
+    "schema": {
+      "image": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 0,
+        "id": "oXZoW7nSQbmPpTZN6Yfu1g"
+      },
+      "image_alt": {
+        "type": "text",
+        "required": true,
+        "pos": 1,
+        "id": "yLcIlR5mTu62nbN4680C8g"
+      },
+      "caption": {
+        "type": "text",
+        "pos": 2,
+        "id": "o4sIU7TWRlKj8aObyp_eYQ"
+      },
+      "width": {
+        "type": "option",
+        "pos": 3,
+        "default_value": "full",
+        "options": [
+          {
+            "name": "Contained",
+            "value": "contained"
+          },
+          {
+            "name": "Wide",
+            "value": "wide"
+          },
+          {
+            "name": "Full bleed",
+            "value": "full"
+          }
+        ],
+        "id": "5alvxdAOQY-kC0T5sauthw"
+      },
+      "aspect": {
+        "type": "option",
+        "pos": 4,
+        "default_value": "auto",
+        "options": [
+          {
+            "name": "Auto",
+            "value": "auto"
+          },
+          {
+            "name": "3:2",
+            "value": "3-2"
+          },
+          {
+            "name": "16:9",
+            "value": "16-9"
+          },
+          {
+            "name": "4:5",
+            "value": "4-5"
+          }
+        ],
+        "id": "K-SV-NmsSN26nwMLwQuQpg"
+      },
+      "max_height": {
+        "type": "option",
+        "pos": 5,
+        "default_value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "70svh",
+            "value": "70svh"
+          },
+          {
+            "name": "90svh",
+            "value": "90svh"
+          }
+        ],
+        "id": "_dc82rkJTyOIbTnO41C4lQ"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "52332iEXQSaSIi3vSfBhjA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Image (full)",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "image_item",
+    "display_name": "Image",
+    "description": null,
+    "created_at": "2026-10-24T17:35:46.180Z",
+    "updated_at": "2026-10-24T17:35:46.180Z",
+    "id": 234183664357452,
+    "schema": {
+      "asset": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 0,
+        "description": "Only upload images with documented consent.",
+        "id": "RVx5WFjZR0KHyAEwyqJeAA"
+      },
+      "alt": {
+        "type": "text",
+        "required": true,
+        "pos": 1,
+        "description": "Describe the activity or scene. Never a child's name.",
+        "id": "wqv1_PPLTE6XLJCqaIGCZw"
+      },
+      "caption": {
+        "type": "text",
+        "pos": 2,
+        "id": "yU_JwKh4StSpEFRdNhi-NA"
+      },
+      "featured": {
+        "type": "boolean",
+        "pos": 3,
+        "id": "cDHWyapXR6G6jsQf8YgSgw"
+      },
+      "aspect": {
+        "type": "option",
+        "pos": 4,
+        "default_value": "auto",
+        "options": [
+          {
+            "name": "Auto",
+            "value": "auto"
+          },
+          {
+            "name": "3:2",
+            "value": "3-2"
+          },
+          {
+            "name": "16:9",
+            "value": "16-9"
+          },
+          {
+            "name": "4:5",
+            "value": "4-5"
+          }
+        ],
+        "id": "TwMNg5fXTdCq1X9QjYUF9Q"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Image",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "image_pair",
+    "display_name": "Image pair",
+    "description": null,
+    "created_at": "2026-10-24T17:35:49.253Z",
+    "updated_at": "2026-10-24T17:35:49.253Z",
+    "id": 234183676944481,
+    "schema": {
+      "images": {
+        "type": "bloks",
+        "maximum": 2,
+        "restrict_components": true,
+        "component_whitelist": [
+          "image_item"
+        ],
+        "pos": 0,
+        "id": "VC0M8ogYTQ6yfQoUhOOJNw"
+      },
+      "caption": {
+        "type": "text",
+        "pos": 1,
+        "id": "0m_G9CLUQfWjXWPtRQsHGA"
+      },
+      "variant": {
+        "type": "option",
+        "pos": 2,
+        "default_value": "equal",
+        "options": [
+          {
+            "name": "Equal",
+            "value": "equal"
+          },
+          {
+            "name": "Asymmetric",
+            "value": "asymmetric"
+          },
+          {
+            "name": "Asymmetric mirrored",
+            "value": "asymmetric-mirrored"
+          }
+        ],
+        "id": "QH3fVw4eTw6kitA4mEiNNg"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "89qshw_aSVe_4ohb8Se_TQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Image pair",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "included_item",
+    "display_name": "Included item",
+    "description": null,
+    "created_at": "2026-10-24T17:35:46.185Z",
+    "updated_at": "2026-10-24T17:35:46.185Z",
+    "id": 234183664377933,
+    "schema": {
+      "text": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "QFX19HpBR3e-oFhww1mb6g"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Included item",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "logo_strip",
+    "display_name": "Logo strip",
+    "description": null,
+    "created_at": "2026-10-24T17:35:49.252Z",
+    "updated_at": "2026-10-24T17:35:49.252Z",
+    "id": 234183676940384,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "R1f82RK6QpiNQsi60qh1BA"
+      },
+      "logos": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "image_item"
+        ],
+        "pos": 1,
+        "description": "Only add logos you have written permission to display.",
+        "id": "lfTN0O-iQWiPEBMEydbWJA"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "ZSvcfzmbTzSKf6YWrqWmhw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Logo strip",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "nav_link",
+    "display_name": "Nav link",
+    "description": null,
+    "created_at": "2026-10-24T17:35:46.173Z",
+    "updated_at": "2026-10-24T17:35:46.173Z",
+    "id": 234183664324682,
+    "schema": {
+      "label": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "IUEIC1ewQFCHqzJRxrxciw"
+      },
+      "link": {
+        "type": "multilink",
+        "required": true,
+        "pos": 1,
+        "id": "TOAtIzSAS_qVHikXXXCSRg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Nav link",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "package",
+    "display_name": "Package",
+    "description": null,
+    "created_at": "2026-10-24T17:35:49.172Z",
+    "updated_at": "2026-10-24T17:35:49.172Z",
+    "id": 234183676612701,
+    "schema": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "1vyk57AvSg-cpixODOlW7A"
+      },
+      "segment": {
+        "type": "option",
+        "pos": 1,
+        "options": [
+          {
+            "name": "Kindergartens",
+            "value": "kindergartens"
+          },
+          {
+            "name": "Schools",
+            "value": "schools"
+          },
+          {
+            "name": "Weddings",
+            "value": "weddings"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ],
+        "id": "yEEZhVeHRnSAAvwkkmL6hA"
+      },
+      "description": {
+        "type": "textarea",
+        "pos": 2,
+        "id": "0jcv0RibSz28ax9juTUnKA"
+      },
+      "price_from": {
+        "type": "text",
+        "pos": 3,
+        "id": "FfSzeYOCSkGUyRnGbiOsfw"
+      },
+      "price_unit": {
+        "type": "option",
+        "pos": 4,
+        "options": [
+          {
+            "name": "Per child",
+            "value": "per_child"
+          },
+          {
+            "name": "Per class",
+            "value": "per_class"
+          },
+          {
+            "name": "Flat",
+            "value": "flat"
+          }
+        ],
+        "id": "B4_XTTpRQrew1orAKbGJnQ"
+      },
+      "included": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "included_item"
+        ],
+        "pos": 5,
+        "id": "MTL8V--aS72xorMk9qtL5w"
+      },
+      "highlight": {
+        "type": "boolean",
+        "pos": 6,
+        "id": "PAoC6DxtT92ETkBm9tMh_g"
+      },
+      "cta_label": {
+        "type": "text",
+        "pos": 7,
+        "id": "P-C3aLsnTXu3X1iwtdkhNg"
+      },
+      "cta_link": {
+        "type": "multilink",
+        "pos": 8,
+        "id": "5yIvJLE_R4KFTTLJlZ0XxA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Package",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "package_cards",
+    "display_name": "Package cards",
+    "description": null,
+    "created_at": "2026-10-24T17:35:46.176Z",
+    "updated_at": "2026-10-24T17:35:46.176Z",
+    "id": 234183664341067,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "5YXy6mTCTPW-7jAMgmrfXg"
+      },
+      "intro": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "9eBDIiWzS7yWPWBztyYCBA"
+      },
+      "packages": {
+        "type": "options",
+        "source": "internal_stories",
+        "folder_slug": "packages/",
+        "pos": 2,
+        "id": "ZfXHGzQyT628LrKkP-vKgw"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "4rRM-jLrSHWSbduDg6SlFA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Package cards",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "page",
+    "display_name": "Page",
+    "description": null,
+    "created_at": "2026-10-24T17:03:09.523Z",
+    "updated_at": "2026-10-24T17:35:50.171Z",
+    "id": 234175649890363,
+    "schema": {
+      "body": {
+        "type": "bloks",
+        "pos": 0,
+        "id": "MeeW2T_BRXS5-XFQIM5vWA"
+      },
+      "seo": {
+        "type": "bloks",
+        "maximum": 1,
+        "restrict_components": true,
+        "component_whitelist": [
+          "seo"
+        ],
+        "pos": 1,
+        "id": "2S9SgxVtTVGvtmzKP7ATUw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Page",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "process_step",
+    "display_name": "Process step",
+    "description": null,
+    "created_at": "2026-10-24T17:35:46.273Z",
+    "updated_at": "2026-10-24T17:35:46.273Z",
+    "id": 234183664738383,
+    "schema": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "9gSaZQKgRI-uASeAvcE0DA"
+      },
+      "description": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "tGUaP-_WRTCbrXI4iSj-6w"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Process step",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "process_steps",
+    "display_name": "Process steps",
+    "description": null,
+    "created_at": "2026-10-24T17:35:50.171Z",
+    "updated_at": "2026-10-24T17:35:50.171Z",
+    "id": 234183680704610,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "uBZmUy13RByMFSQro7o_-w"
+      },
+      "steps": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "process_step"
+        ],
+        "pos": 1,
+        "id": "kTyN_GjdTlWZCePJgSQ1LA"
+      },
+      "variant": {
+        "type": "option",
+        "pos": 2,
+        "default_value": "line",
+        "options": [
+          {
+            "name": "Line",
+            "value": "line"
+          },
+          {
+            "name": "Numbered",
+            "value": "numbered"
+          }
+        ],
+        "id": "AOt_bVunSI2ogfqhGxemZg"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "-5lABAZfRFm0aoGB4Wz97g"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Process steps",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "project",
+    "display_name": "Project",
+    "description": null,
+    "created_at": "2026-10-24T17:35:50.187Z",
+    "updated_at": "2026-10-24T17:35:50.187Z",
+    "id": 234183680770148,
+    "schema": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "VYu7Yb4ATZuzu0zUrqrjEA"
+      },
+      "segment": {
+        "type": "option",
+        "pos": 1,
+        "options": [
+          {
+            "name": "Kindergartens",
+            "value": "kindergartens"
+          },
+          {
+            "name": "Schools",
+            "value": "schools"
+          },
+          {
+            "name": "Weddings",
+            "value": "weddings"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ],
+        "id": "pI2Q3LyCTjK2ePLqqXunLg"
+      },
+      "cover": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 2,
+        "id": "O2lFHrSxQ7WuM8yqTtz76w"
+      },
+      "cover_alt": {
+        "type": "text",
+        "required": true,
+        "pos": 3,
+        "id": "ZXWffPBCTSqnrZGQt2BwBw"
+      },
+      "year": {
+        "type": "text",
+        "pos": 4,
+        "id": "P4I381n9TSGvmORhXIg6QA"
+      },
+      "location": {
+        "type": "text",
+        "pos": 5,
+        "id": "8JM6xQ4BTDW4stQdYdKC0A"
+      },
+      "intro": {
+        "type": "richtext",
+        "pos": 6,
+        "id": "eXZoHUdySjieOsIr9kI3lw"
+      },
+      "body": {
+        "type": "bloks",
+        "pos": 7,
+        "id": "AXXEuhsARc2riYOXD4_RBA"
+      },
+      "seo": {
+        "type": "bloks",
+        "maximum": 1,
+        "restrict_components": true,
+        "component_whitelist": [
+          "seo"
+        ],
+        "pos": 8,
+        "id": "JGw8Xl4oQbCxxeHnhmiJ3Q"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Project",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "project_grid",
+    "display_name": "Project grid",
+    "description": null,
+    "created_at": "2026-10-24T17:35:46.263Z",
+    "updated_at": "2026-10-24T17:35:46.263Z",
+    "id": 234183664697422,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "0cJj1z0lQn6yeT91Q2fGgw"
+      },
+      "segment": {
+        "type": "option",
+        "pos": 1,
+        "options": [
+          {
+            "name": "All",
+            "value": ""
+          },
+          {
+            "name": "Kindergartens",
+            "value": "kindergartens"
+          },
+          {
+            "name": "Schools",
+            "value": "schools"
+          },
+          {
+            "name": "Weddings",
+            "value": "weddings"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ],
+        "id": "lz5oM2R6QAu-UKA6YuqNcw"
+      },
+      "projects": {
+        "type": "options",
+        "source": "internal_stories",
+        "folder_slug": "portfolio/",
+        "pos": 2,
+        "description": "Leave empty to show all projects, optionally filtered by segment.",
+        "id": "o-3Glg3fRR6bFHJ0L7i39g"
+      },
+      "show_filter": {
+        "type": "boolean",
+        "pos": 3,
+        "id": "ap79VdnIS46uMCSJHbKveg"
+      },
+      "layout": {
+        "type": "option",
+        "pos": 4,
+        "default_value": "grid",
+        "options": [
+          {
+            "name": "Grid",
+            "value": "grid"
+          },
+          {
+            "name": "Wide",
+            "value": "wide"
+          }
+        ],
+        "id": "P6krL9QrScCKB0HAforhWQ"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "q7MhAIwgR6ahQO_hTv9L4g"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Project grid",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "quote",
+    "display_name": "Quote",
+    "description": null,
+    "created_at": "2026-10-24T17:35:47.186Z",
+    "updated_at": "2026-10-24T17:35:47.186Z",
+    "id": 234183668478035,
+    "schema": {
+      "text": {
+        "type": "textarea",
+        "required": true,
+        "pos": 0,
+        "id": "D-RbgnuqQXmvM0gvL_NQOw"
+      },
+      "attribution": {
+        "type": "text",
+        "pos": 1,
+        "id": "AQGQX8XuRZi4E4UXZwmOZg"
+      },
+      "variant": {
+        "type": "option",
+        "pos": 2,
+        "default_value": "plain",
+        "options": [
+          {
+            "name": "Plain",
+            "value": "plain"
+          },
+          {
+            "name": "Over image",
+            "value": "over-image"
+          }
+        ],
+        "id": "Cr1IQ9dRQfSVqNi7GAsEAw"
+      },
+      "image": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "pos": 3,
+        "description": "Only used by the 'Over image' variant.",
+        "id": "UONaZkIbT7Oxp82Y2-3gxg"
+      },
+      "image_alt": {
+        "type": "text",
+        "pos": 4,
+        "id": "jgaPu1UATP2nvDsiRCAfCQ"
+      },
+      "overlay_strength": {
+        "type": "option",
+        "pos": 20,
+        "default_value": "medium",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Strong",
+            "value": "strong"
+          }
+        ],
+        "description": "Darkens the photo behind text. Bright photos may still fail contrast — check the result.",
+        "id": "SM3hMVkCQquQSoAMdMyEgA"
+      },
+      "text_tone": {
+        "type": "option",
+        "pos": 21,
+        "default_value": "light",
+        "options": [
+          {
+            "name": "Light text",
+            "value": "light"
+          },
+          {
+            "name": "Dark text",
+            "value": "dark"
+          }
+        ],
+        "description": "Light text suits dark photos; dark text suits pale ones.",
+        "id": "T4U9RxviTIWzX8UgRIqWtw"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "JHMLLFpZSi6hnty2iH8CUA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Quote",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "rich_text",
+    "display_name": "Rich text",
+    "description": null,
+    "created_at": "2026-10-24T17:35:47.173Z",
+    "updated_at": "2026-10-24T17:35:47.173Z",
+    "id": 234183668424784,
+    "schema": {
+      "text": {
+        "type": "richtext",
+        "pos": 0,
+        "id": "XNcj8oc1QfyBnPNt-BdnmQ"
+      },
+      "width": {
+        "type": "option",
+        "pos": 1,
+        "default_value": "contained",
+        "options": [
+          {
+            "name": "Contained",
+            "value": "contained"
+          },
+          {
+            "name": "Wide",
+            "value": "wide"
+          }
+        ],
+        "id": "fTf6URtKTimr2wT_0Nw58w"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Rich text",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "segment_card",
+    "display_name": "Segment card",
+    "description": null,
+    "created_at": "2026-10-24T17:35:47.175Z",
+    "updated_at": "2026-10-24T17:35:47.175Z",
+    "id": 234183668432978,
+    "schema": {
+      "label": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "vfY6TYdwQbuqePKw5eBoZw"
+      },
+      "image": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 1,
+        "id": "MvZ7QwlUTQSHgXMsK2ZAWw"
+      },
+      "image_alt": {
+        "type": "text",
+        "required": true,
+        "pos": 2,
+        "id": "XJvnrla6RrCyNeuWFdW9_A"
+      },
+      "link": {
+        "type": "multilink",
+        "required": true,
+        "pos": 3,
+        "id": "EAykBNiBS-aa3GU6cM2E6w"
+      },
+      "segment": {
+        "type": "option",
+        "pos": 4,
+        "options": [
+          {
+            "name": "Kindergartens",
+            "value": "kindergartens"
+          },
+          {
+            "name": "Schools",
+            "value": "schools"
+          },
+          {
+            "name": "Weddings",
+            "value": "weddings"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ],
+        "id": "KkjAy8bRS3CkSneRCUVCJQ"
+      },
+      "overlay_strength": {
+        "type": "option",
+        "pos": 20,
+        "default_value": "medium",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Strong",
+            "value": "strong"
+          }
+        ],
+        "description": "Darkens the photo behind text. Bright photos may still fail contrast — check the result.",
+        "id": "4Qc3TFpTSWudftMRss4igA"
+      },
+      "text_tone": {
+        "type": "option",
+        "pos": 21,
+        "default_value": "light",
+        "options": [
+          {
+            "name": "Light text",
+            "value": "light"
+          },
+          {
+            "name": "Dark text",
+            "value": "dark"
+          }
+        ],
+        "description": "Light text suits dark photos; dark text suits pale ones.",
+        "id": "yngrdhoxSXylcYZUInjl1A"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Segment card",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "segment_chooser",
+    "display_name": "Segment chooser",
+    "description": null,
+    "created_at": "2026-10-24T17:35:50.173Z",
+    "updated_at": "2026-10-24T17:35:50.173Z",
+    "id": 234183680712803,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "3otmpdmcSf2M2H7cqI_kMA"
+      },
+      "items": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "segment_card"
+        ],
+        "pos": 1,
+        "id": "A8ZTCChHTZ-BWp20_HaimQ"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "9Sm2IxOpRAW11slTXFhymQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Segment chooser",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "segment_page",
+    "display_name": "Segment page",
+    "description": null,
+    "created_at": "2026-10-24T17:35:50.252Z",
+    "updated_at": "2026-10-24T17:35:50.252Z",
+    "id": 234183681036390,
+    "schema": {
+      "segment": {
+        "type": "option",
+        "required": true,
+        "pos": 0,
+        "options": [
+          {
+            "name": "Kindergartens",
+            "value": "kindergartens"
+          },
+          {
+            "name": "Schools",
+            "value": "schools"
+          },
+          {
+            "name": "Weddings",
+            "value": "weddings"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ],
+        "id": "rpb9Qh09Sx6m4i-BslaBUg"
+      },
+      "body": {
+        "type": "bloks",
+        "pos": 1,
+        "id": "253fYO9PSVqMntYwQkDvhA"
+      },
+      "seo": {
+        "type": "bloks",
+        "maximum": 1,
+        "restrict_components": true,
+        "component_whitelist": [
+          "seo"
+        ],
+        "pos": 2,
+        "id": "_EAPoTgpQ3KMhXXZ2MGvbg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Segment page",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "seo",
+    "display_name": "SEO",
+    "description": null,
+    "created_at": "2026-10-24T17:35:47.173Z",
+    "updated_at": "2026-10-24T17:35:47.173Z",
+    "id": 234183668424785,
+    "schema": {
+      "title": {
+        "type": "text",
+        "pos": 0,
+        "id": "j2NwQBA2TSmh6eFD-Z-uZw"
+      },
+      "description": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "gRFK-AoNQF-Hb9elcoFZMQ"
+      },
+      "og_image": {
+        "type": "text",
+        "pos": 2,
+        "id": "qhiF2kWpSM-QJtWv16sfcw"
+      },
+      "og_title": {
+        "type": "text",
+        "pos": 3,
+        "id": "S23kIGUJT0OgBamXE9cT2w"
+      },
+      "og_description": {
+        "type": "textarea",
+        "pos": 4,
+        "id": "AescZUvNQTmcUP7yaYg9tQ"
+      },
+      "twitter_image": {
+        "type": "text",
+        "pos": 5,
+        "id": "u100XbW9QYu6MBdOrr2Pvg"
+      },
+      "twitter_title": {
+        "type": "text",
+        "pos": 6,
+        "id": "g54eBEH0TjuMZ9oi82P2Gw"
+      },
+      "twitter_description": {
+        "type": "textarea",
+        "pos": 7,
+        "id": "yyBUP_niSoufWmgtkugQcw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "SEO",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "spacer",
+    "display_name": "Spacer",
+    "description": null,
+    "created_at": "2026-10-24T17:35:47.249Z",
+    "updated_at": "2026-10-24T17:35:47.249Z",
+    "id": 234183668736084,
+    "schema": {
+      "size": {
+        "type": "option",
+        "pos": 0,
+        "default_value": "medium",
+        "options": [
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          }
+        ],
+        "id": "dESlj4FnR4ePkMQz2z-WkA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Spacer",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "stat_item",
+    "display_name": "Stat",
+    "description": null,
+    "created_at": "2026-10-24T17:35:47.266Z",
+    "updated_at": "2026-10-24T17:35:47.266Z",
+    "id": 234183668805717,
+    "schema": {
+      "value": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "vK3dr_WRQESu00fYG5cqtQ"
+      },
+      "label": {
+        "type": "text",
+        "required": true,
+        "pos": 1,
+        "id": "18mAmewdTPG65ElV8KC3wg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Stat",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "stats",
+    "display_name": "Stats",
+    "description": null,
+    "created_at": "2026-10-24T17:35:50.251Z",
+    "updated_at": "2026-10-24T17:35:50.251Z",
+    "id": 234183681032293,
+    "schema": {
+      "items": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "stat_item"
+        ],
+        "pos": 0,
+        "id": "cIK-WiS0TlyA8c7KF9V_Vw"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "GInyCO0_S-uSTx98UdwAJw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Stats",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "testimonial",
+    "display_name": "Testimonial",
+    "description": null,
+    "created_at": "2026-10-24T17:35:48.174Z",
+    "updated_at": "2026-10-24T17:35:48.174Z",
+    "id": 234183672524886,
+    "schema": {
+      "quote": {
+        "type": "textarea",
+        "required": true,
+        "pos": 0,
+        "id": "NIL3XgReTuyKQW_ReEZ_wA"
+      },
+      "name": {
+        "type": "text",
+        "pos": 1,
+        "id": "aXQEDlOlQgqyVrAzTOpJZA"
+      },
+      "role": {
+        "type": "text",
+        "pos": 2,
+        "id": "HdSXHzQ_SeOUq1lVZ21kow"
+      },
+      "organisation": {
+        "type": "text",
+        "pos": 3,
+        "id": "Ir5RnC4gQ5WG-5NWyB2HNg"
+      },
+      "segment": {
+        "type": "option",
+        "pos": 4,
+        "options": [
+          {
+            "name": "Kindergartens",
+            "value": "kindergartens"
+          },
+          {
+            "name": "Schools",
+            "value": "schools"
+          },
+          {
+            "name": "Weddings",
+            "value": "weddings"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ],
+        "id": "qn8V7hgiSYaQaAIq8sStcg"
+      },
+      "portrait": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "pos": 5,
+        "id": "rWCu3AfqQ1WYDZzGGmSreg"
+      },
+      "portrait_alt": {
+        "type": "text",
+        "pos": 6,
+        "id": "PRRAtoS0TnyYGY5JFA1hOA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Testimonial",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "testimonials",
+    "display_name": "Testimonials",
+    "description": null,
+    "created_at": "2026-10-24T17:35:48.188Z",
+    "updated_at": "2026-10-24T17:35:48.188Z",
+    "id": 234183672582233,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "C39SP4VqSWObaBGNukk1rw"
+      },
+      "testimonials": {
+        "type": "options",
+        "source": "internal_stories",
+        "folder_slug": "testimonials/",
+        "pos": 1,
+        "id": "vcxcy0fZRJu9olF8oNgGwA"
+      },
+      "layout": {
+        "type": "option",
+        "pos": 2,
+        "default_value": "grid",
+        "options": [
+          {
+            "name": "Grid",
+            "value": "grid"
+          },
+          {
+            "name": "Single",
+            "value": "single"
+          }
+        ],
+        "id": "bLbupQITS7aCN5EELczUpg"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "fOgvtXboQB6mKNvx7tN7OQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Testimonials",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "text_image",
+    "display_name": "Text + image",
+    "description": null,
+    "created_at": "2026-10-24T17:35:48.176Z",
+    "updated_at": "2026-10-24T17:35:48.176Z",
+    "id": 234183672533079,
+    "schema": {
+      "image": {
+        "type": "asset",
+        "filetypes": [
+          "images"
+        ],
+        "required": true,
+        "pos": 0,
+        "id": "6OliggnWSIO9ufKqbHoP0A"
+      },
+      "image_alt": {
+        "type": "text",
+        "required": true,
+        "pos": 1,
+        "id": "YNx664HTS_OAMuIXmf1EwQ"
+      },
+      "headline": {
+        "type": "text",
+        "pos": 2,
+        "id": "8UcFUsdUTV-ETI2UOrk-pw"
+      },
+      "text": {
+        "type": "richtext",
+        "pos": 3,
+        "id": "jfz4lBNiRquu-wXqtU-kVA"
+      },
+      "cta_label": {
+        "type": "text",
+        "pos": 4,
+        "id": "HNMX_-bETdaWmNzvQG6puA"
+      },
+      "cta_link": {
+        "type": "multilink",
+        "pos": 5,
+        "id": "VbwiWcgzRZOG5KGzpieMRg"
+      },
+      "image_side": {
+        "type": "option",
+        "pos": 6,
+        "default_value": "left",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ],
+        "id": "ltAcNCifTomVsHdX_x4cIQ"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "tKYIZPbSR_6soGWI_j-xpw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Text + image",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "trust_bar",
+    "display_name": "Trust bar",
+    "description": null,
+    "created_at": "2026-10-24T17:35:51.174Z",
+    "updated_at": "2026-10-24T17:35:51.174Z",
+    "id": 234183684812903,
+    "schema": {
+      "items": {
+        "type": "bloks",
+        "restrict_components": true,
+        "component_whitelist": [
+          "trust_item"
+        ],
+        "pos": 0,
+        "id": "Ys2wYRpFTre_3fQs21Tobw"
+      },
+      "motion": {
+        "type": "option",
+        "pos": 90,
+        "default_value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ],
+        "description": "Switch animation off for this block.",
+        "id": "qjIao2mLQJiINVdNntCuuQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Trust bar",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "trust_item",
+    "display_name": "Trust item",
+    "description": null,
+    "created_at": "2026-10-24T17:35:48.177Z",
+    "updated_at": "2026-10-24T17:35:48.177Z",
+    "id": 234183672537176,
+    "schema": {
+      "text": {
+        "type": "text",
+        "required": true,
+        "pos": 0,
+        "id": "WmO4TyDnTwa241w1s1owWw"
+      },
+      "icon": {
+        "type": "option",
+        "pos": 1,
+        "default_value": "check",
+        "options": [
+          {
+            "name": "Check",
+            "value": "check"
+          },
+          {
+            "name": "Shield",
+            "value": "shield"
+          },
+          {
+            "name": "Clock",
+            "value": "clock"
+          },
+          {
+            "name": "Camera",
+            "value": "camera"
+          },
+          {
+            "name": "Heart",
+            "value": "heart"
+          },
+          {
+            "name": "Users",
+            "value": "users"
+          }
+        ],
+        "id": "N8h9AOo0RYiGSsDlFJMZsQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Trust item",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  }
+]

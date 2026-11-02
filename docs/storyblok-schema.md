@@ -54,7 +54,7 @@ create them in this order:
 - Restrict allowed blocks per field using the `allows:` column below.
 - Set preview URLs per content type so the Visual Editor resolves.
 
-## Nestable blocks (33)
+## Nestable blocks (34)
 
 Insertable inside other blocks. Several are nested-only — they are never added at
 page level, only inside their parent.
@@ -67,8 +67,16 @@ page level, only inside their parent.
 | --- | --- | --- |
 | `heading` | Text | — |
 | `intro` | Textarea | — |
-| `segments` | Multi-Options | values: `kindergartens`, `schools`, `weddings`, `other` |
+| `types` | Blocks | allows: `contact_type`<br>The choices in the Type dropdown, in this order. Leave empty for the four defaults. |
 | `success_message` | Textarea | — |
+
+### `contact_type`
+
+**Contact type** · Nestable block
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `label` | Text | **required**<br>One choice in the Type dropdown. Shown to visitors and repeated in the inquiry email, so write it in Danish. |
 
 ### `cta_banner`
 
