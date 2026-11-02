@@ -2,16 +2,12 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 import { ContactFormUI } from "@/components/forms/contact-form-ui";
 import { submitContact } from "@/app/actions/contact";
-import type { ContactSegment } from "@/lib/contact-schema";
-import { SEGMENTS } from "@/lib/contact-schema";
-import type { ContactFormStoryblok } from "@/lib/storyblok/types";
+import type { ContactFormStoryblok, ContactTypeStoryblok } from "@/lib/storyblok/types";
 
 /** contact_form (architecture.md §4, §11). Layer 3 — unwraps the blok, injects the action. */
 export function ContactForm({ blok }: { blok: ContactFormStoryblok }) {
-  const configured = Array.isArray(blok.segments) ? blok.segments : [];
-  const segments = configured.filter((value): value is ContactSegment =>
-    (SEGMENTS as readonly string[]).includes(value as string),
-  );
+  const types = (blok.types ?? []) as ContactTypeStoryblok[];
+  const options = types.map((type) => type.label ?? "").filter(Boolean);
 
   return (
     <section {...storyblokEditable(blok)} className="container-content py-16 sm:py-24">
@@ -29,7 +25,7 @@ export function ContactForm({ blok }: { blok: ContactFormStoryblok }) {
         <div className="mt-10">
           <ContactFormUI
             action={submitContact}
-            segments={segments}
+            types={options}
             successMessage={blok.success_message}
           />
         </div>

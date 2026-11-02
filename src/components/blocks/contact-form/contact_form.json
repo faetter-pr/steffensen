@@ -12,27 +12,12 @@
       "type": "textarea",
       "pos": 1
     },
-    "segments": {
-      "type": "options",
+    "types": {
+      "type": "bloks",
       "pos": 2,
-      "options": [
-        {
-          "name": "Kindergartens",
-          "value": "kindergartens"
-        },
-        {
-          "name": "Schools",
-          "value": "schools"
-        },
-        {
-          "name": "Weddings",
-          "value": "weddings"
-        },
-        {
-          "name": "Other",
-          "value": "other"
-        }
-      ]
+      "restrict_components": true,
+      "component_whitelist": ["contact_type"],
+      "description": "The choices in the Type dropdown, in this order. Leave empty for the four defaults."
     },
     "success_message": {
       "type": "textarea",

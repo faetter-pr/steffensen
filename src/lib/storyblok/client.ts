@@ -34,7 +34,7 @@ import { SegmentPage } from "@/components/pages/segment-page";
  * Registry keys MUST equal the Storyblok technical name, and the component's filename
  * must match it too (see CLAUDE.md hard rules). hero_fullbleed → hero-fullbleed.tsx.
  *
- * Nested-only bloks (image_item, faq_item, nav_link, included_item, process_step,
+ * Nested-only bloks (image_item, faq_item, contact_type, nav_link, included_item, process_step,
  * stat_item, trust_item, segment_card, seo) are deliberately absent: their parent block
  * renders them directly rather than going through the registry.
  */

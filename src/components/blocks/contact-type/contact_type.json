@@ -1,0 +1,14 @@
+{
+  "name": "contact_type",
+  "display_name": "Contact type",
+  "is_root": false,
+  "is_nestable": true,
+  "schema": {
+    "label": {
+      "type": "text",
+      "required": true,
+      "pos": 0,
+      "description": "One choice in the Type dropdown. Shown to visitors and repeated in the inquiry email, so write it in Danish."
+    }
+  }
+}

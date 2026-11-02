@@ -1370,17 +1370,35 @@
     },
     "contact_form": {
       "label": "Contact form",
-      "notes": "architecture.md §11 — pick a type and the fields change. Submitting without RESEND_API_KEY returns a clear error.",
+      "notes": "Five fields: navn, e-mail, telefon, type, besked. The Type choices come from the `types` bloks — an empty list falls back to DEFAULT_CONTACT_TYPES. Submitting without RESEND_API_KEY returns a clear error.",
       "variants": [
         {
-          "name": "All segments",
+          "name": "Editor-defined types",
           "segment": null,
           "blok": {
             "_uid": "m-cf",
             "component": "contact_form",
             "heading": "Fortæl om opgaven",
             "intro": "Jeg vender tilbage inden for to hverdage.",
-            "segments": ["kindergartens", "schools", "weddings", "other"],
+            "types": [
+              { "_uid": "m-ct-1", "component": "contact_type", "label": "Børnehave" },
+              { "_uid": "m-ct-2", "component": "contact_type", "label": "Skole" },
+              { "_uid": "m-ct-3", "component": "contact_type", "label": "Bryllup" },
+              { "_uid": "m-ct-4", "component": "contact_type", "label": "Konfirmation" },
+              { "_uid": "m-ct-5", "component": "contact_type", "label": "Andet" }
+            ],
+            "success_message": "Tak! Jeg vender tilbage inden for to hverdage."
+          }
+        },
+        {
+          "name": "No types configured (falls back)",
+          "segment": "weddings",
+          "blok": {
+            "_uid": "m-cf-2",
+            "component": "contact_form",
+            "heading": "Fortæl om jeres dag",
+            "intro": "Jeg vender tilbage inden for to hverdage.",
+            "types": [],
             "success_message": "Tak! Jeg vender tilbage inden for to hverdage."
           }
         }

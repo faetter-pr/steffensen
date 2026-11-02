@@ -136,14 +136,14 @@ Using `package` and `testimonial` as **reusable content types** (rather than nes
 
 **Forms and access**
 
-- `contact_form`: heading, intro, `segments[]`, success message
+- `contact_form`: heading, intro, `contact_type[]` (the Type dropdown's choices), success message
 - `gallery_access`: heading, instructions, input for gallery code (see section 12)
 
 **Content / utility**
 
 - `rich_text`, `quote`, `spacer`
 
-**Nested-only** (not insertable at page level): `image_item` (`asset`, `alt`, `caption`, `featured`), `faq_item`, `nav_link`, `included_item`
+**Nested-only** (not insertable at page level): `image_item` (`asset`, `alt`, `caption`, `featured`), `faq_item`, `nav_link`, `included_item`, `contact_type` (`label`)
 
 ### Which blocks each segment page uses
 
@@ -358,10 +358,8 @@ One wrapper, `PhotoImage`, used by every block.
 ## 11. Business features
 
 - **SEO:** `generateMetadata` per story, Open Graph from cover, JSON-LD (`LocalBusiness`, `ImageGallery`, `Service`), sitemap. Local SEO matters: target phrases like "kindergarten photographer [city]", "school photography [region]", "wedding photographer [city]".
-- **Segment-aware inquiry form:** the first question is "What is this for?" (kindergarten / school / wedding / other), which reveals the relevant fields:
-  - Institution: name, number of children/classes, preferred period, contact person
-  - Wedding: date, venue, guest count, hours of coverage
-  - Delivery: server action → email (Resend) + honeypot or Turnstile.
+- **Inquiry form:** five fields, always visible — navn, e-mail, telefon (optional), type, besked. The Type dropdown's choices are editor-defined on the `contact_form` blok (`types` → `contact_type` bloks), so the list can change without a deploy; `DEFAULT_CONTACT_TYPES` covers an empty field. Delivery: server action → email (Resend) + honeypot or Turnstile.
+  - *Superseded:* this section originally specified a segment-aware form that revealed a different field set per segment (institution name, class count, wedding date, venue, guest count, coverage hours…). It was built and then removed — the free-text message collects the same information, and the reply is a conversation anyway. Validation lives in `src/lib/contact-schema.ts`.
 - **Downloadable info PDF** for institutions (price sheet, process, consent template), linked from segment pages.
 - **Analytics:** Plausible or similar, cookie-free.
 - **Performance budget:** LCP under 2.5 s on gallery pages.

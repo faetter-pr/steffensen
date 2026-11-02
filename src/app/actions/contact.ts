@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-import { type ContactState, SEGMENT_LABELS, contactSchema } from "@/lib/contact-schema";
+import { type ContactInput, type ContactState, contactSchema } from "@/lib/contact-schema";
 
 /**
  * Inquiry form server action (architecture.md §11): validate, then email via Resend.
@@ -57,7 +57,7 @@ export async function submitContact(
       from,
       to,
       replyTo: data.email,
-      subject: `Forespørgsel: ${SEGMENT_LABELS[data.segment]} — ${data.name}`,
+      subject: oneLine(`Forespørgsel: ${data.type} — ${data.name}`),
       text: formatInquiry(data),
     });
 
@@ -73,37 +73,23 @@ export async function submitContact(
   }
 }
 
-/** Plain-text body. Field set differs per segment (§11). */
-function formatInquiry(data: ReturnType<typeof contactSchema.parse>): string {
+/**
+ * Subjects are a single header line. `type` and `name` are submitted values, so collapse
+ * any newline a forged POST might carry before they get there.
+ */
+function oneLine(value: string): string {
+  return value.replace(/[\r\n]+/g, " ").slice(0, 200);
+}
+
+/** Plain-text body — the same five fields the form asks for. */
+function formatInquiry(data: ContactInput): string {
   const lines: string[] = [
-    `Type: ${SEGMENT_LABELS[data.segment]}`,
+    `Type: ${data.type}`,
     `Navn: ${data.name}`,
     `E-mail: ${data.email}`,
   ];
 
   if (data.phone) lines.push(`Telefon: ${data.phone}`);
-
-  switch (data.segment) {
-    case "kindergartens":
-      lines.push(`Institution: ${data.organisation}`);
-      if (data.group_count) lines.push(`Antal børn/grupper: ${data.group_count}`);
-      if (data.preferred_period) lines.push(`Ønsket periode: ${data.preferred_period}`);
-      break;
-    case "schools":
-      lines.push(`Skole: ${data.organisation}`);
-      if (data.class_count) lines.push(`Antal klasser: ${data.class_count}`);
-      if (data.preferred_period) lines.push(`Ønsket periode: ${data.preferred_period}`);
-      break;
-    case "weddings":
-      if (data.wedding_date) lines.push(`Dato: ${data.wedding_date}`);
-      if (data.venue) lines.push(`Sted: ${data.venue}`);
-      if (data.guest_count) lines.push(`Antal gæster: ${data.guest_count}`);
-      if (data.coverage_hours) lines.push(`Timer: ${data.coverage_hours}`);
-      break;
-    case "other":
-      if (data.occasion) lines.push(`Anledning: ${data.occasion}`);
-      break;
-  }
 
   lines.push("", "Besked:", data.message);
   return lines.join("\n");

@@ -1,46 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useActionState, useState } from "react";
+import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
-  type ContactSegment,
-  type ContactState,
-  SEGMENTS,
-  SEGMENT_LABELS,
-} from "@/lib/contact-schema";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { type ContactState, DEFAULT_CONTACT_TYPES } from "@/lib/contact-schema";
 
 /**
  * Inquiry form UI (architecture.md §11, §13.9).
  *
- * Layer 2: no Storyblok imports. The action is injected so this stays reusable.
+ * Layer 2: no Storyblok imports. The action and the type list are injected so this stays
+ * reusable and the CMS owns the choices.
  *
- * §11: the first question is "what is this for?", and the answer reveals the relevant
- * fields — a kindergarten and a wedding need different information, and showing all of
- * it at once makes the form feel like paperwork.
+ * Five fields, always visible: name, e-mail, phone, type, message. Nothing is revealed
+ * or hidden as you fill it in — the form should read as short, because it is.
  */
 
 interface ContactFormUIProps {
   action: (state: ContactState, formData: FormData) => Promise<ContactState>;
-  segments?: ContactSegment[];
+  /** Choices for the Type dropdown. Empty falls back to DEFAULT_CONTACT_TYPES. */
+  types?: string[];
   successMessage?: string;
 }
 
 const INITIAL: ContactState = { status: "idle" };
 
-export function ContactFormUI({ action, segments, successMessage }: ContactFormUIProps) {
-  const available = segments?.length ? segments : [...SEGMENTS];
-  const [segment, setSegment] = useState<ContactSegment>(available[0] ?? "other");
+export function ContactFormUI({ action, types, successMessage }: ContactFormUIProps) {
+  // Radix needs a non-empty, unique value per item, and an editor can produce neither.
+  const available = dedupe(types ?? []);
+  const options = available.length ? available : [...DEFAULT_CONTACT_TYPES];
   const [state, formAction] = useActionState(action, INITIAL);
 
   if (state.status === "success") {
     return (
-      <div role="status" className="rounded-xl border border-brand-accent bg-secondary/50 p-8">
+      <div role="status" className="border-t border-brand-accent pt-8">
         <h3 className="font-heading text-2xl">Tak for din henvendelse.</h3>
         <p className="mt-3 leading-relaxed">
           {successMessage || "Jeg vender tilbage inden for to hverdage."}
@@ -51,74 +55,34 @@ export function ContactFormUI({ action, segments, successMessage }: ContactFormU
 
   return (
     <form action={formAction} className="space-y-6" noValidate>
-      {/* §11 — "What is this for?" comes first and drives the rest. */}
-      <fieldset>
-        <legend className="text-sm font-medium">Hvad drejer det sig om?</legend>
-
-        <div className="mt-3 flex flex-wrap gap-2">
-          {available.map((value) => (
-            <label
-              key={value}
-              className={`tap-target flex cursor-pointer items-center rounded-full border px-4 text-sm transition-colors ${
-                segment === value
-                  ? "border-brand-accent bg-secondary"
-                  : "border-border hover:bg-secondary/50"
-              }`}
-            >
-              <input
-                type="radio"
-                name="segment"
-                value={value}
-                checked={segment === value}
-                onChange={() => setSegment(value)}
-                className="sr-only"
-              />
-              {SEGMENT_LABELS[value]}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-
-      {segment === "kindergartens" ? (
-        <>
-          <Field
-            name="organisation"
-            label="Institutionens navn"
-            required
-            error={state.errors?.organisation}
-          />
-          <Field name="group_count" label="Antal børn eller grupper" />
-          <Field name="preferred_period" label="Ønsket periode" />
-        </>
-      ) : null}
-
-      {segment === "schools" ? (
-        <>
-          <Field
-            name="organisation"
-            label="Skolens navn"
-            required
-            error={state.errors?.organisation}
-          />
-          <Field name="class_count" label="Antal klasser" />
-          <Field name="preferred_period" label="Ønsket periode" />
-        </>
-      ) : null}
-
-      {segment === "weddings" ? (
-        <>
-          <Field name="wedding_date" label="Dato" type="date" />
-          <Field name="venue" label="Sted" />
-          <Field name="guest_count" label="Antal gæster" />
-          <Field name="coverage_hours" label="Ønsket antal timer" />
-        </>
-      ) : null}
-
-      {segment === "other" ? <Field name="occasion" label="Anledning" /> : null}
-
-      <Field name="name" label="Dit navn" required error={state.errors?.name} />
+      <Field name="name" label="Navn" required error={state.errors?.name} />
       <Field name="email" label="E-mail" type="email" required error={state.errors?.email} />
       <Field name="phone" label="Telefon" type="tel" />
+
+      <div>
+        <Label htmlFor="type">
+          Type <RequiredMark />
+        </Label>
+        {/* Radix renders a hidden native select for `name`, so this submits with the form. */}
+        <Select name="type" required>
+          <SelectTrigger
+            id="type"
+            className="mt-2 w-full"
+            aria-describedby={state.errors?.type ? "type-error" : undefined}
+            aria-invalid={state.errors?.type ? true : undefined}
+          >
+            <SelectValue placeholder="Vælg type" />
+          </SelectTrigger>
+          <SelectContent>
+            {options.map((label) => (
+              <SelectItem key={label} value={label}>
+                {label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        {state.errors?.type ? <FieldError id="type-error">{state.errors.type}</FieldError> : null}
+      </div>
 
       <div>
         <Label htmlFor="message">
@@ -162,6 +126,11 @@ export function ContactFormUI({ action, segments, successMessage }: ContactFormU
       </div>
     </form>
   );
+}
+
+/** Trim, drop blanks, drop repeats — an editor-defined list can contain all three. */
+function dedupe(values: string[]): string[] {
+  return [...new Set(values.map((value) => value.trim()).filter(Boolean))];
 }
 
 function SubmitButton() {

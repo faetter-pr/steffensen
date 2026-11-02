@@ -31,6 +31,7 @@ import type { ISbStoryData, StoryblokRichTextInput } from "@storyblok/react/rsc"
 import type {
   AssetStoryblok,
   ContactFormStoryblok as GenContactForm,
+  ContactTypeStoryblok as GenContactType,
   CtaBannerStoryblok as GenCtaBanner,
   FaqStoryblok as GenFaq,
   FaqItemStoryblok as GenFaqItem,
@@ -102,6 +103,7 @@ export type HeroFullbleedStoryblok = GenHeroFullbleed &
 export type RichTextStoryblok = GenRichText & SbEditable & { text?: RichtextStoryblok };
 
 /* --- nested-only bloks (§4) --- */
+export type ContactTypeStoryblok = GenContactType & SbEditable;
 export type FaqItemStoryblok = GenFaqItem & SbEditable & { answer?: RichtextStoryblok };
 export type IncludedItemStoryblok = GenIncludedItem & SbEditable;
 export type ProcessStepStoryblok = GenProcessStep & SbEditable;
@@ -133,7 +135,8 @@ export type CtaBannerStoryblok = GenCtaBanner & SbEditable & { cta_link?: Multil
 export type StatsStoryblok = GenStats & SbEditable;
 export type QuoteStoryblok = GenQuote & SbEditable;
 export type SpacerStoryblok = GenSpacer & SbEditable;
-export type ContactFormStoryblok = GenContactForm & SbEditable;
+export type ContactFormStoryblok = GenContactForm &
+  SbEditable & { types?: ContactTypeStoryblok[] };
 export type GalleryAccessStoryblok = GenGalleryAccess & SbEditable;
 
 /* --- content types (§3) --- */
